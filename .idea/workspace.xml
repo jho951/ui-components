@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cfedb07-9511-4df4-b3ae-e7d820d23e37" name="Changes" comment="fix:버전 일치">
+    <list default="true" id="1cfedb07-9511-4df4-b3ae-e7d820d23e37" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples" beforeDir="false" afterPath="$PROJECT_DIR$/examples" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/next/.storybook/main.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/next/.storybook/preview.ts" beforeDir="false" />
@@ -17,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/examples/react/src/stories/BaseButton.stories.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/react/src/stories/Icon.stories.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/react/src/stories/Spinner.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "release/sync-main",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/jhons/Downloads/FE/ui-components",

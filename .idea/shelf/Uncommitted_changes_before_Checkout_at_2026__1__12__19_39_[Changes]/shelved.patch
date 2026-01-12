@@ -1,0 +1,347 @@
+Index: examples/react/.storybook/main.ts
+===================================================================
+diff --git a/examples/react/.storybook/main.ts b/examples/react/.storybook/main.ts
+deleted file mode 100644
+--- a/examples/react/.storybook/main.ts	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ /dev/null	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
+@@ -1,9 +0,0 @@
+-import type { StorybookConfig } from '@storybook/react-vite';
+-
+-const config: StorybookConfig = {
+-  framework: '@storybook/react-vite',
+-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
+-  addons: ['@storybook/addon-docs']
+-};
+-
+-export default config;
+Index: examples/next/stories/Spinner.stories.tsx
+===================================================================
+diff --git a/examples/next/stories/Spinner.stories.tsx b/examples/next/stories/Spinner.stories.tsx
+deleted file mode 100644
+--- a/examples/next/stories/Spinner.stories.tsx	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ /dev/null	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
+@@ -1,16 +0,0 @@
+-import type { Meta, StoryObj } from '@storybook/react';
+-import React from 'react';
+-import { Spinner } from '@jho951/ui-components';
+-
+-const meta: Meta<typeof Spinner> = {
+-  title: 'UI/Spinner (Next)',
+-  component: Spinner,
+-  args: {
+-    size: 32
+-  }
+-};
+-
+-export default meta;
+-type Story = StoryObj<typeof Spinner>;
+-
+-export const Basic: Story = {};
+Index: examples/react/src/stories/Icon.stories.tsx
+===================================================================
+diff --git a/examples/react/src/stories/Icon.stories.tsx b/examples/react/src/stories/Icon.stories.tsx
+deleted file mode 100644
+--- a/examples/react/src/stories/Icon.stories.tsx	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ /dev/null	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
+@@ -1,21 +0,0 @@
+-import { Icon } from "@jho951/ui-components";
+-
+-const SIZE = 24
+-
+-export default {
+-    title: "Foundation/Icon",
+-    component: Icon,
+-    argTypes: {
+-        name: { control: "text" },
+-        size: { control: { type: "number", min: 8, max: 96, step: 1 } },
+-    },
+-};
+-
+-export const SpinnerIcon = {
+-    args: { name: "spinner", size: SIZE },
+-};
+-
+-export const undo ={
+-    args: { name: "undo", size: SIZE },
+-}
+-
+Index: examples/next/.storybook/preview.ts
+===================================================================
+diff --git a/examples/next/.storybook/preview.ts b/examples/next/.storybook/preview.ts
+deleted file mode 100644
+--- a/examples/next/.storybook/preview.ts	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ /dev/null	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
+@@ -1,9 +0,0 @@
+-import type { Preview } from '@storybook/react';
+-
+-const preview: Preview = {
+-  parameters: {
+-    controls: { expanded: true }
+-  }
+-};
+-
+-export default preview;
+Index: examples/react/.storybook/preview.ts
+===================================================================
+diff --git a/examples/react/.storybook/preview.ts b/examples/react/.storybook/preview.ts
+deleted file mode 100644
+--- a/examples/react/.storybook/preview.ts	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ /dev/null	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
+@@ -1,9 +0,0 @@
+-import type { Preview } from '@storybook/react-vite';
+-
+-const preview: Preview = {
+-  parameters: {
+-    controls: { expanded: true }
+-  }
+-};
+-
+-export default preview;
+Index: examples/react/src/stories/Spinner.stories.tsx
+===================================================================
+diff --git a/examples/react/src/stories/Spinner.stories.tsx b/examples/react/src/stories/Spinner.stories.tsx
+deleted file mode 100644
+--- a/examples/react/src/stories/Spinner.stories.tsx	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ /dev/null	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
+@@ -1,13 +0,0 @@
+-import { Spinner } from "@jho951/ui-components";
+-
+-export default {
+-    title: "Feedback/Spinner",
+-    component: Spinner,
+-    argTypes: {
+-        size: { control: { type: "number", min: 8, max: 96, step: 1 } },
+-    },
+-};
+-
+-export const Basic = {
+-    args: { size: 24 },
+-};
+Index: examples/next/.storybook/main.ts
+===================================================================
+diff --git a/examples/next/.storybook/main.ts b/examples/next/.storybook/main.ts
+deleted file mode 100644
+--- a/examples/next/.storybook/main.ts	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ /dev/null	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
+@@ -1,56 +0,0 @@
+-// This file has been automatically migrated to valid ESM format by Storybook.
+-import { fileURLToPath } from "node:url";
+-import type { StorybookConfig } from '@storybook/nextjs';
+-import path, { dirname } from 'node:path';
+-
+-const __filename = fileURLToPath(import.meta.url);
+-const __dirname = dirname(__filename);
+-
+-const config: StorybookConfig = {
+-  framework: {
+-    name: '@storybook/nextjs',
+-    options: {
+-      // Ensures Storybook loads the monorepo-friendly Next config.
+-      nextConfigPath: path.resolve(__dirname, '../next.config.js')
+-    }
+-  },
+-
+-  stories: ['../stories/**/*.stories.@(js|jsx|ts|tsx)'],
+-  addons: ['@storybook/addon-docs'],
+-
+-  webpackFinal: async (cfg) => {
+-    // In monorepos, webpack often excludes node_modules from CSS Modules handling.
+-    // Alias the workspace package to its source so Next/Storybook treats it as local code.
+-    const uiSrc = path.resolve(__dirname, '../../../packages/ui/src');
+-    cfg.resolve = cfg.resolve || {};
+-    cfg.resolve.alias = {
+-      ...(cfg.resolve.alias || {}),
+-      '@jho951/ui-components': uiSrc
+-    };
+-
+-    // Also include the workspace package dir for CSS module processing when needed.
+-    // Some setups still resolve CSS from the package root, so we broaden includes.
+-    const uiPkg = path.resolve(__dirname, '../../../packages/ui');
+-    const rules = cfg.module?.rules;
+-    if (Array.isArray(rules)) {
+-      for (const r of rules) {
+-        // Target the existing *.module.css rule from Next.
+-        const test = (r as any)?.test;
+-        if (test && test instanceof RegExp && test.test('x.module.css')) {
+-          // Next's rule sometimes has an `issuer`/`include` that excludes external dirs.
+-          // We extend it to cover our monorepo package.
+-          const include = (r as any).include;
+-          if (Array.isArray(include)) {
+-            include.push(uiPkg, uiSrc);
+-          } else if (include) {
+-            (r as any).include = [include, uiPkg, uiSrc];
+-          }
+-        }
+-      }
+-    }
+-
+-    return cfg;
+-  }
+-};
+-
+-export default config;
+Index: examples/next/stories/Icon.stories.tsx
+===================================================================
+diff --git a/examples/next/stories/Icon.stories.tsx b/examples/next/stories/Icon.stories.tsx
+deleted file mode 100644
+--- a/examples/next/stories/Icon.stories.tsx	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ /dev/null	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
+@@ -1,22 +0,0 @@
+-import type { Meta, StoryObj } from '@storybook/react';
+-import React from 'react';
+-import { Icon } from '@jho951/ui-components';
+-
+-const meta: Meta<typeof Icon> = {
+-  title: 'UI/Icon (Next)',
+-  component: Icon,
+-  args: {
+-    name: 'bucket',
+-    size: 24,
+-    title: 'bucket'
+-  },
+-  argTypes: {
+-    name: { control: 'text' },
+-    size: { control: { type: 'number', min: 12, max: 64, step: 2 } }
+-  }
+-};
+-
+-export default meta;
+-type Story = StoryObj<typeof Icon>;
+-
+-export const Basic: Story = {};
+Index: examples/react/src/stories/BaseButton.stories.tsx
+===================================================================
+diff --git a/examples/react/src/stories/BaseButton.stories.tsx b/examples/react/src/stories/BaseButton.stories.tsx
+deleted file mode 100644
+--- a/examples/react/src/stories/BaseButton.stories.tsx	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ /dev/null	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
+@@ -1,70 +0,0 @@
+-import type { Meta, StoryObj } from "@storybook/react-vite";
+-import { BaseButton, Icon, BUTTON_VARIANTS, BUTTON_SIZES} from "@jho951/ui-components";
+-
+-
+-const meta: Meta<typeof BaseButton> = {
+-    title: "Atoms/Button/BaseButton",
+-    component: BaseButton,
+-    tags: ["autodocs"],
+-    argTypes: {
+-        variant: { control: "select", options: BUTTON_VARIANTS },
+-        size: { control: "select", options: BUTTON_SIZES },
+-        isLoading: { control: "boolean" },
+-        disabled: { control: "boolean" },
+-        children: { control: "text" },
+-        leftIcon: { control: false },
+-        rightIcon: { control: false },
+-    },
+-    args: {
+-        children: "Button",
+-        variant: "primary",
+-        size: "m",
+-        isLoading: false,
+-        disabled: false,
+-    },
+-};
+-
+-export default meta;
+-type Story = StoryObj<typeof BaseButton>;
+-
+-export const Playground: Story = {};
+-
+-export const WithIcons: Story = {
+-    args: {
+-        children: "아이콘 버튼",
+-        leftIcon: <Icon name="undo" size={18} />,
+-        rightIcon: <Icon name="right-arrow" size={18} />,
+-        variant: "secondary",
+-        size: "m",
+-    },
+-};
+-
+-export const Loading: Story = {
+-    args: {
+-        children: "제출 중",
+-        isLoading: true,
+-    },
+-};
+-export const AllVariants: Story = {
+-    render: (args) => (
+-        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+-            {BUTTON_VARIANTS.map((variant) => (
+-                <div key={variant}>
+-                    <h4 style={{ marginBottom: 12 }}>{variant}</h4>
+-                    <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+-                        {BUTTON_SIZES.map((size) => (
+-                            <BaseButton
+-                                {...args}
+-                                key={size}
+-                                variant={variant}
+-                                size={size}
+-                            >
+-                                {variant} {size}
+-                            </BaseButton>
+-                        ))}
+-                    </div>
+-                </div>
+-            ))}
+-        </div>
+-    ),
+-};
+\ No newline at end of file
+Index: examples/next/package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"ui-components-next-storybook\",\n  \"private\": true,\n  \"version\": \"0.0.0\",\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"storybook\": \"storybook dev -p 6007\",\n    \"build-storybook\": \"storybook build\"\n  },\n  \"dependencies\": {\n    \"next\": \"^15.0.0\",\n    \"react\": \"^18.3.0\",\n    \"react-dom\": \"^18.3.0\",\n    \"@jho951/ui-components\": \"workspace:*\"\n  },\n  \"devDependencies\": {\n    \"@storybook/nextjs\": \"^10.1.11\",\n    \"@storybook/testing-library\": \"^0.2.2\",\n    \"@types/node\": \"^20.11.0\",\n    \"@types/react\": \"^18.3.0\",\n    \"@types/react-dom\": \"^18.3.0\",\n    \"storybook\": \"^10.1.11\",\n    \"typescript\": \"^5.6.0\",\n    \"@storybook/addon-docs\": \"^10.1.11\"\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/next/package.json b/examples/next/package.json
+--- a/examples/next/package.json	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ b/examples/next/package.json	(date 1768197994941)
+@@ -10,19 +10,15 @@
+     "build-storybook": "storybook build"
+   },
+   "dependencies": {
++    "@jho951/ui-components": "workspace:*",
+     "next": "^15.0.0",
+     "react": "^18.3.0",
+-    "react-dom": "^18.3.0",
+-    "@jho951/ui-components": "workspace:*"
++    "react-dom": "^18.3.0"
+   },
+   "devDependencies": {
+-    "@storybook/nextjs": "^10.1.11",
+-    "@storybook/testing-library": "^0.2.2",
+     "@types/node": "^20.11.0",
+     "@types/react": "^18.3.0",
+     "@types/react-dom": "^18.3.0",
+-    "storybook": "^10.1.11",
+-    "typescript": "^5.6.0",
+-    "@storybook/addon-docs": "^10.1.11"
++    "typescript": "^5.6.0"
+   }
+ }
+Index: examples/react/package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"ui-components-react-storybook\",\n  \"private\": true,\n  \"version\": \"0.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"preview\": \"vite preview\",\n    \"storybook\": \"storybook dev -p 6006\",\n    \"build-storybook\": \"storybook build\"\n  },\n  \"dependencies\": {\n    \"@jho951/ui-components\": \"workspace:*\",\n    \"react\": \"^18.3.0\",\n    \"react-dom\": \"^18.3.0\"\n  },\n  \"devDependencies\": {\n    \"@storybook/addon-docs\": \"^10.1.11\",\n    \"@storybook/addon-essentials\": \"8.6.15\",\n    \"@storybook/react-vite\": \"^10.1.11\",\n    \"@storybook/testing-library\": \"^0.2.2\",\n    \"@types/react\": \"^18.3.0\",\n    \"@types/react-dom\": \"^18.3.0\",\n    \"@vitejs/plugin-react\": \"^4.3.0\",\n    \"storybook\": \"^10.1.11\",\n    \"typescript\": \"^5.6.0\",\n    \"vite\": \"^5.4.0\"\n  }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/react/package.json b/examples/react/package.json
+--- a/examples/react/package.json	(revision 6762c4a544eb01aa491ba620572b2581e61c9441)
++++ b/examples/react/package.json	(date 1768197980748)
+@@ -16,14 +16,9 @@
+     "react-dom": "^18.3.0"
+   },
+   "devDependencies": {
+-    "@storybook/addon-docs": "^10.1.11",
+-    "@storybook/addon-essentials": "8.6.15",
+-    "@storybook/react-vite": "^10.1.11",
+-    "@storybook/testing-library": "^0.2.2",
+     "@types/react": "^18.3.0",
+     "@types/react-dom": "^18.3.0",
+     "@vitejs/plugin-react": "^4.3.0",
+-    "storybook": "^10.1.11",
+     "typescript": "^5.6.0",
+     "vite": "^5.4.0"
+   }
