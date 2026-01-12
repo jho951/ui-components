@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cfedb07-9511-4df4-b3ae-e7d820d23e37" name="Changes" comment="fix:버전 일치">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples" beforeDir="false" afterPath="$PROJECT_DIR$/examples" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/next/.storybook/main.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/next/.storybook/preview.ts" beforeDir="false" />
@@ -111,7 +109,7 @@
       <workItem from="1767959591317" duration="1568000" />
       <workItem from="1768095142255" duration="1759000" />
       <workItem from="1768104679043" duration="599000" />
-      <workItem from="1768196480500" duration="2282000" />
+      <workItem from="1768196480500" duration="2949000" />
     </task>
     <task id="LOCAL-00001" summary="fix:버전 일치">
       <option name="closed" value="true" />
