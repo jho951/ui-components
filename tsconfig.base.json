@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@assert/*": ["packages/assert/*"],
+      "@internal/*": ["packages/internal/*"],
+      "@scripts/*": ["scripts/internal/*"],
+      "@ui/*": ["packages/ui/*"]
+    }
+  }
+}

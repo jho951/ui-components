@@ -1,0 +1,48 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: var(--btn-border-radius, 2rem);
+    color: var(--color-white, #ffffff);
+
+    transition:
+            background-color 0.3s ease,
+            transform 0.2s ease;
+
+    cursor: pointer;
+}
+
+.primary {
+    background-color: var(--color-primary, #f0f0f0);
+}
+
+.secondary {
+    background-color: var(--color-second-gray, #f0f0f0);
+    color: var(--color-white, #ffffff);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--color-primary, #f0f0f0);
+  border: 1px solid var(--color-primary, #f0f0f0);
+}
+
+/* ===== Size Variants ===== */
+.s {
+  font-size: var(font-s, 1.4rem);
+  padding: 0.4rem 0.8rem;
+}
+
+.m {
+  font-size:var(font-m, 1.6rem);
+  padding: 0.5rem 1rem;
+}
+
+.l {
+  font-size: var(font-l, 1.8rem);
+  padding: 1.2rem;
+}
+
+
