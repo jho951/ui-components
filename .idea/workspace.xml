@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cfedb07-9511-4df4-b3ae-e7d820d23e37" name="Changes" comment="">
+    <list default="true" id="c5e5b970-0a87-4d0e-ae5f-29986c6c786c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/Arrow.constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/Arrow.constant.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/Arrow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/Arrow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.constant.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/modal/Modal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,139 +14,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/examples" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_COMMON_BRANCH" value="main" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="SYNC" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="37k2nmtC8yIAABQ3s4szrqawwN9" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Merging dev",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/jhons/Downloads/FE/ui-components/packages/assert/svg",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
+    "git-widget-placeholder": "dev",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/Users/jhons/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+    "ts.external.directory.path": "/Users/jhons/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/javascript-plugin/jsLanguageServicesImpl/external"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/ui/Button" />
-      <recent name="$PROJECT_DIR$/packages/ui/components" />
-      <recent name="$PROJECT_DIR$/packages/ui/src/components" />
-      <recent name="$PROJECT_DIR$/packages/ui/src/components/Spinner" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/examples/react/src/stories" />
-      <recent name="$PROJECT_DIR$/packages/ui/Button" />
-      <recent name="$PROJECT_DIR$/packages/ui" />
-      <recent name="$PROJECT_DIR$/packages" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="1cfedb07-9511-4df4-b3ae-e7d820d23e37" name="Changes" comment="" />
-      <created>1767432917349</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1767432917349</updated>
-      <workItem from="1767432919140" duration="2307000" />
-      <workItem from="1767435257889" duration="3793000" />
-      <workItem from="1767496468096" duration="7087000" />
-      <workItem from="1767539694353" duration="6600000" />
-      <workItem from="1767548385846" duration="16706000" />
-      <workItem from="1767592734780" duration="108000" />
-      <workItem from="1767592913858" duration="2606000" />
-      <workItem from="1767598582606" duration="4000" />
-      <workItem from="1767598594735" duration="606000" />
-      <workItem from="1767623741792" duration="5761000" />
-      <workItem from="1767634512803" duration="16511000" />
-      <workItem from="1767709445294" duration="709000" />
-      <workItem from="1767959591317" duration="1568000" />
-      <workItem from="1768095142255" duration="1759000" />
-      <workItem from="1768104679043" duration="599000" />
-      <workItem from="1768196480500" duration="2949000" />
-      <workItem from="1768215348349" duration="2290000" />
-      <workItem from="1768273097358" duration="4698000" />
-      <workItem from="1768281083222" duration="1778000" />
-      <workItem from="1768287365334" duration="5472000" />
-      <workItem from="1768307263562" duration="25000" />
-      <workItem from="1768307320673" duration="703000" />
-      <workItem from="1768308221810" duration="12046000" />
-      <workItem from="1768363891282" duration="15130000" />
-      <workItem from="1768446219478" duration="14529000" />
-      <workItem from="1768624654999" duration="22292000" />
-      <workItem from="1768700418096" duration="900000" />
-    </task>
-    <task id="LOCAL-00001" summary="fix:버전 일치">
-      <option name="closed" value="true" />
-      <created>1768197474735</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1768197474735</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix:버전 일치" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix:버전 일치" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/packages/sss/vitest.config.ts</url>
-          <line>8</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/packages/ui/icon/Icon.tsx</url>
-          <line>18</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
