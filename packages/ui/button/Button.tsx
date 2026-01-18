@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 import { Spinner } from "../spinner";
 import {cn} from "../../lib";
-import type { BaseButtonProps, ButtonProps } from "./index";
+import type { BaseButtonProps, ButtonProps } from "./Button.types";
 import styles from "./Button.module.css";
 
 
@@ -27,7 +27,7 @@ BaseButton.displayName = 'BaseButton';
  * 비즈니스 로직(로딩 시 Spinner 렌더링)을 캡슐화합니다.
  */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ children, isLoading,leftIcon,rightIcon, ...rest }, ref) => {
+    ({ children, isLoading, leftIcon, rightIcon, ...rest }, ref) => {
         if (isLoading) return <Spinner />;
         return (
             <BaseButton ref={ref}{...rest}>

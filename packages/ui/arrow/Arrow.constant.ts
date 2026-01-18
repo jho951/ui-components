@@ -1,8 +1,8 @@
 import type { ArrowDirection } from './Arrow.types';
 
 export const DIRECTION_MAP: Record<ArrowDirection, string> = {
-    right: '0deg',
-    down: '90deg',
-    left: '180deg',
-    up: '-90deg',
+    down: '0deg',
+    right: '90deg',
+    up: '180deg',
+    left: '-90deg',
 };

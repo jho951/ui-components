@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cfedb07-9511-4df4-b3ae-e7d820d23e37" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/Arrow.constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/Arrow.constant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/Arrow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/Arrow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.constant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/modal/Modal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +24,6 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/examples" value="main" />
-        <entry key="$PROJECT_DIR$/storybook" value="dev" />
       </map>
     </option>
     <option name="RECENT_COMMON_BRANCH" value="main" />
@@ -38,6 +45,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "Merging dev",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/jhons/Downloads/FE/ui-components/packages/assert/svg",
@@ -50,7 +58,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "/Users/jhons/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
@@ -58,36 +66,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/assert/svg" />
-      <recent name="$PROJECT_DIR$/packages" />
-      <recent name="$PROJECT_DIR$/packages/lib" />
-      <recent name="$PROJECT_DIR$/storybook" />
-      <recent name="$PROJECT_DIR$/storybook/stories/textarea" />
+      <recent name="$PROJECT_DIR$/packages/ui/Button" />
+      <recent name="$PROJECT_DIR$/packages/ui/components" />
+      <recent name="$PROJECT_DIR$/packages/ui/src/components" />
+      <recent name="$PROJECT_DIR$/packages/ui/src/components/Spinner" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/ui" />
-      <recent name="$PROJECT_DIR$/packages" />
-      <recent name="$PROJECT_DIR$/packages/ui/components" />
       <recent name="$PROJECT_DIR$/examples/react/src/stories" />
       <recent name="$PROJECT_DIR$/packages/ui/Button" />
+      <recent name="$PROJECT_DIR$/packages/ui" />
+      <recent name="$PROJECT_DIR$/packages" />
+      <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.build" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -130,8 +120,7 @@
       <workItem from="1768363891282" duration="15130000" />
       <workItem from="1768446219478" duration="14529000" />
       <workItem from="1768624654999" duration="22292000" />
-      <workItem from="1768700418096" duration="1272000" />
-      <workItem from="1768701696621" duration="67000" />
+      <workItem from="1768700418096" duration="900000" />
     </task>
     <task id="LOCAL-00001" summary="fix:버전 일치">
       <option name="closed" value="true" />
@@ -158,6 +147,11 @@
           <url>file://$PROJECT_DIR$/packages/sss/vitest.config.ts</url>
           <line>8</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/ui/icon/Icon.tsx</url>
+          <line>18</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
