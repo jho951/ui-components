@@ -1,2 +1,5 @@
 export { Icon } from "./Icon";
-export type { IconProps } from "./Icon.types";
+export * from "./Icon.types";
+export * from "./Icon.util";
+export { SVG_ASSETS } from "../../assert/svg/index";
+

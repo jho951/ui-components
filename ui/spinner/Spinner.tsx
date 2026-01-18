@@ -1,31 +1,24 @@
-import { SpinnerProps } from "./Spinner.types";
+import type { SpinnerProps } from "./index";
+import {cn} from '../../lib';
 import { Icon } from "../icon";
-import styles from './Spinner.module.css'
+import styles from "./Spinner.module.css";
+
 /**
- * @file Spinner.tsx
- * @description
- * Icon SVG 스피너를 불러와 회전 애니메이션을 주는 Atom 컴포넌트입니다.
+ * `Spinner` 컴포넌트는 시스템의 로딩 상태를 시각적으로 나타냅니다.
+ * - `Icon` 컴포넌트의 'spinner' 아이콘을 기반으로 작동합니다.
+ * - CSS 애니메이션을 통해 무한 회전하며, 접근성을 고려하여 `role="status"`를 포함합니다.
  *
- * @usage
+ * ### 사용 예시
  * ```tsx
- * <Spinner />
- * <Spinner size={32} className="custom-spinner" />
+ * <Spinner size={32} label="데이터 불러오는 중" />
  * ```
- *
- * @prop {number} [size=24] - 아이콘 크기(px)
- * @prop {string} [className] - 추가 클래스명
  */
-function Spinner({ size = 24, className, label = "Loading" }: SpinnerProps) {
+const Spinner = ({ size = 24, className, label = "Loading" }: SpinnerProps) => {
     return (
-        <span
-            className={[styles.spinner, className].filter(Boolean).join(" ")}
-            role="status"
-            aria-label={label}
-            aria-live="polite"
-        >
+        <span className={cn(styles.spinner, className)} role="status" aria-label={label} aria-live="polite">
             <Icon name="spinner" size={size} />
         </span>
     );
-}
+};
 
 export { Spinner };
