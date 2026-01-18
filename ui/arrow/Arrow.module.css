@@ -1,0 +1,11 @@
+.container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(var(--arrow-rotation, 0deg));
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
