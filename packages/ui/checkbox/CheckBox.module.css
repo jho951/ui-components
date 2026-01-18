@@ -1,0 +1,34 @@
+.container {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.checkBox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d9d9d9;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background-color: #fff;
+}
+
+/* 체크되거나 Indeterminate일 때 배경색 변경 */
+.checked + .checkBox,
+.indeterminate + .checkBox {
+    background-color: #1890ff;
+    border-color: #1890ff;
+}
+
+.error {
+    border-color:var(--error-color);
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

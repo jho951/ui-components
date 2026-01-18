@@ -1,44 +1,41 @@
 # @jho951/ui-components
 
-React / Next.js에서 같이 쓸 수 있는 **TypeScript UI 컴포넌트 패키지**입니다.
+---
 
-## 구조
-- `packages/ui` : **npm publish 대상 라이브러리**
-- `examples/react` : React(Vite) + Storybook (포트 6006)
-- `examples/next` : Next.js + Storybook (포트 6007)
+### 버전 확인
+````bash
+# 해당하는지 확인해주세요.
+node -v # Node.js: >= 22
+pnpm -v # pnpm: 9.x
+````
 
-## 설치/빌드
-```bash
-pnpm i
-pnpm -C packages/ui build
-```
+### 설치
 
-## Storybook로 테스트
-```bash
-# React Storybook
-pnpm -C examples/react storybook
+````bash
+# pnpm workspace를 통해서 packages와 storybook이 함께 설치됩니다.
+pnpm install 
+````
 
-# Next.js Storybook
-pnpm -C examples/next storybook
-```
+### Storybook 실행
+````bash
+# 기본 접속 주소는 http://localhost:6006 입니다.
+pnpm -C storybook dev
+````
 
-## 로컬에서 publish 전 검증 (추천)
-`packages/ui`에서 pack 만들고, 실제 프로젝트에 설치해서 확인하세요.
-```bash
-pnpm -C packages/ui build
-pnpm -C packages/ui pack
-# dist/*.tgz 생성
-```
+### UI 라이브러리 빌드
+````bash
+# UI 패키지만 빌드
+pnpm --filter @jho951/ui-components build
+````
 
-## npm publish
-> 스코프 패키지(@jho951)는 기본이 private라서, public로 올릴 때 `--access public`가 필요합니다.
+### npm 배포 (publish)
+- Storybook은 배포하지 않고 <b>packages/ui</b>만 배포합니다.
+````bash
+pnpm --filter @jho951/ui-components build
+pnpm --filter @jho951/ui-components publish --access public
+````
 
-```bash
-cd packages/ui
-npm login
-npm publish --access public
-```
+### 라이선스
+- 이 프로젝트는 [LICENSE](./LICENSE) 파일을 따릅니다.
 
-## 참고
-- 아이콘은 `packages/ui/src/components/icon/svg.ts`를 **단일 소스**로 사용합니다.
-  (`generate:icons`는 성공적으로 종료만 하며, 추가 생성물은 만들지 않습니다.)
+---

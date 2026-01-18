@@ -13,10 +13,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@assert/*": ["packages/assert/*"],
-      "@internal/*": ["packages/internal/*"],
-      "@scripts/*": ["scripts/internal/*"],
-      "@ui/*": ["packages/ui/*"]
+      "@jho951/ui-components": ["packages/ui/index.ts"],
+      "@jho951/assets": ["packages/assert/*"]
     }
   }
 }
