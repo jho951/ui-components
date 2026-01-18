@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 import { BackDrop } from "../backdrop";
-import type { ModalProps } from "./index";
+import type { ModalProps } from "./Modal.types";
 import { ensurePortalRoot, cn} from "../../lib";
 import { useScrollLock } from "../../hook";
 import styles from "./Modal.module.css";
