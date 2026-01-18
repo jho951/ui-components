@@ -5,51 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cfedb07-9511-4df4-b3ae-e7d820d23e37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/publish-github-packages.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/publish-npm.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug-storybook.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/assert/icon/_core.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/assert/icon/editor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/assert/icon/history.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/assert/icon/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/assert/icon/logo.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/assert/icon/misc.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/assert/icon/panels.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/assert/icon/shapes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/internal/dom.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/scripts/copy-css.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/scripts/generate-icons.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/button/BaseButton.constant.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/button/BaseButton.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/button/BaseButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/button/BaseButton.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/button/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/global.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/icon/Icon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/icon/Icon.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/icon/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/spinner/Spinner.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/spinner/Spinner.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/spinner/Spinner.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/spinner/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/ui/tsup.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/examples/react/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Arrow.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/BackDrop.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Button.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Card.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Checkbox.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Divider.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Form.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Icon.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Label.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Modal.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Spinner.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Tag.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storybook/stories/Textarea.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/.storybook/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/.storybook/preview.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/next-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/stories/Icon.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/stories/Spinner.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/next/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/.storybook/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/.storybook/preview.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/dist/assets/index-51AoZzdM.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/src/stories/BaseButton.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/src/stories/Icon.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/src/stories/Spinner.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storybook/react/vite.config.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +53,9 @@
         <entry key="$PROJECT_DIR$/examples" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/examples" />
+    <option name="RECENT_COMMON_BRANCH" value="main" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/storybook" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -82,12 +75,13 @@
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jhons/Downloads/FE/ui-components&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jhons/Downloads/FE/ui-components/packages/assert/svg&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -99,18 +93,36 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/ui/Button" />
-      <recent name="$PROJECT_DIR$/packages/ui/components" />
-      <recent name="$PROJECT_DIR$/packages/ui/src/components" />
-      <recent name="$PROJECT_DIR$/packages/ui/src/components/Spinner" />
+      <recent name="$PROJECT_DIR$/packages/assert/svg" />
+      <recent name="$PROJECT_DIR$/packages" />
+      <recent name="$PROJECT_DIR$/packages/lib" />
+      <recent name="$PROJECT_DIR$/storybook" />
+      <recent name="$PROJECT_DIR$/storybook/stories/textarea" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/examples/react/src/stories" />
-      <recent name="$PROJECT_DIR$/packages/ui/Button" />
       <recent name="$PROJECT_DIR$/packages/ui" />
       <recent name="$PROJECT_DIR$/packages" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/packages/ui/components" />
+      <recent name="$PROJECT_DIR$/examples/react/src/stories" />
+      <recent name="$PROJECT_DIR$/packages/ui/Button" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -142,12 +154,36 @@
       <workItem from="1767959591317" duration="1568000" />
       <workItem from="1768095142255" duration="1759000" />
       <workItem from="1768104679043" duration="599000" />
-      <workItem from="1768196480500" duration="837000" />
+      <workItem from="1768196480500" duration="2949000" />
+      <workItem from="1768215348349" duration="2290000" />
+      <workItem from="1768273097358" duration="4698000" />
+      <workItem from="1768281083222" duration="1778000" />
+      <workItem from="1768287365334" duration="5472000" />
+      <workItem from="1768307263562" duration="25000" />
+      <workItem from="1768307320673" duration="703000" />
+      <workItem from="1768308221810" duration="12046000" />
+      <workItem from="1768363891282" duration="15130000" />
+      <workItem from="1768446219478" duration="14529000" />
+      <workItem from="1768624654999" duration="22292000" />
+      <workItem from="1768700418096" duration="900000" />
     </task>
+    <task id="LOCAL-00001" summary="fix:버전 일치">
+      <option name="closed" value="true" />
+      <created>1768197474735</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1768197474735</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix:버전 일치" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix:버전 일치" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -156,6 +192,11 @@
           <url>file://$PROJECT_DIR$/packages/sss/vitest.config.ts</url>
           <line>8</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/ui/icon/Icon.tsx</url>
+          <line>18</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

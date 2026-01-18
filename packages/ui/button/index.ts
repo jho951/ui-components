@@ -1,3 +1,3 @@
-export * from './BaseButton';
-export * from './BaseButton.types';
-export * from './BaseButton.constant'
+export * from './Button';
+export * from './Button.types';
+export * from './Button.constant'

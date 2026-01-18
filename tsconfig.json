@@ -1,11 +1,8 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./packages/ui" },
-    { "path": "./packages/assert"},
-    { "path": "./packages/internal"},
-    { "path": "./packages/scripts"},
-    { "path": "./examples/react" },
-    { "path": "./examples/next" }
-  ]
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["packages/**/*", "storybook/**/*"],
+  "exclude": ["**/dist/**", "**/node_modules/**"]
 }

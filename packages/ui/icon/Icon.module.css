@@ -1,0 +1,16 @@
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    flex: 0 0 auto;
+}
+
+/* registry / remote 구분이 필요하면 유지 (없으면 지워도 됨) */
+.registry {}
+.remote {}
+
+/* 로딩/실패 placeholder: 레이아웃 깨짐 방지 */
+.placeholder {
+    border-radius: 6px;
+    background: currentColor;
+    opacity: 0.12;
+}

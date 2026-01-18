@@ -1,19 +1,109 @@
 import React from "react";
-import type { IconProps } from "./Icon.types";
-import {ICONS} from "../../assert/icon";
+import styles from "./Icon.module.css";
 
-export function Icon({ name, size = 24, title, ...rest }: IconProps) {
-    const data = ICONS[name];
+import { cn } from "../../lib/cn";
+import type { IconProps, IconRegistry } from "./Icon.types";
+import {
+    extractSvgInner,
+    extractViewBox,
+    getAriaProps,
+    getRegistryIcon,
+    resolveIconSrc,
+    useInlineSvg,
+} from "./Icon.util";
 
-    const ariaProps = title
-        ? { role: "img" as const, "aria-label": title }
-        : { "aria-hidden": true as const };
+import { SVG_ASSETS } from "../../assert/svg";
+
+const DEFAULT_ICONS: IconRegistry = Object.entries(SVG_ASSETS).reduce(
+    (acc, [name, content]) => {
+        const isString = typeof content === "string";
+        const isSvgContent = isString && content.includes("<svg");
+
+        acc[name] = {
+            vb: isSvgContent ? extractViewBox(content) : "0 0 24 24",
+            raw: isSvgContent ? extractSvgInner(content) : undefined,
+            src: !isSvgContent ? content : undefined, // 문자열이 아니면 경로로 간주
+        };
+        return acc;
+    },
+    {} as IconRegistry
+);
+
+const Icon = ({
+                  name,
+                  size = 24,
+                  title,
+                  color,
+                  source = "auto",
+                  src,
+                  basePath = "/assert/svg",
+                  ext = "svg",
+                  icons,
+                  className,
+                  style,
+                  ...rest
+              }: IconProps) => {
+    const registry = (icons ?? DEFAULT_ICONS);
+    const regData = getRegistryIcon(String(name), registry);
+
+    const shouldUseRegistry =
+        source === "registry" || (source === "auto" && !!regData);
+
+    const ariaProps = getAriaProps(title);
+
+    const svgCommonProps = {
+        width: size,
+        height: size,
+        focusable: "false" as const,
+        style: { color, ...style },
+        ...ariaProps,
+        ...rest,
+    };
+
+    // A) Registry 모드
+    if (shouldUseRegistry && regData) {
+        // 이미 데이터가 파싱되어 있다면 (Vite + ?raw 환경 등)
+        if (regData.raw || regData.g) {
+            return (
+                <svg
+                    viewBox={regData.vb}
+                    className={cn(styles.icon, styles.registry, className)}
+                    {...svgCommonProps}
+                >
+                    {regData.g?.map(({ el, ...attrs }, i) =>
+                        React.createElement(el, { key: i, ...attrs })
+                    )}
+                    {regData.raw && (
+                        <g dangerouslySetInnerHTML={{ __html: regData.raw }} />
+                    )}
+                </svg>
+            );
+        }
+    }
+
+    // B) URL 모드 또는 Registry에 경로만 있는 경우 (Next.js 기본 설정 등)
+    // regData.src가 있으면 그것을 우선 사용하고 없으면 기본 규칙대로 경로 생성
+    const finalSrc = regData?.src || resolveIconSrc(String(name), src, basePath, ext);
+    const svgText = useInlineSvg(finalSrc);
+
+    if (!svgText) {
+        return (
+            <span
+                className={cn(styles.icon, styles.placeholder, className)}
+                style={{ width: size, height: size, ...style }}
+                aria-hidden
+            />
+        );
+    }
 
     return (
-        <svg viewBox={data.vb} width={size} height={size} focusable="false" {...ariaProps} {...rest}>
-            {data.g.map(({ el, ...attrs }, i) =>
-                React.createElement(el, { key: i, ...attrs })
-            )}
-        </svg>
+        <svg
+            viewBox={extractViewBox(svgText)}
+            className={cn(styles.icon, styles.remote, className)}
+            {...svgCommonProps}
+            dangerouslySetInnerHTML={{ __html: extractSvgInner(svgText) }}
+        />
     );
-}
+};
+
+export { Icon };
