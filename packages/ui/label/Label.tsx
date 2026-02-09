@@ -1,6 +1,6 @@
-import { cn } from "../../lib";
+import { cn } from "@lib/index.ts";
 import {Icon} from '../icon';
-import type { LabelProps } from "./index";
+import type { LabelProps } from "./index.ts";
 import styles from "./Label.module.css";
 
 const Label=({className, children, htmlFor, required = false, variant = 'default', ...rest}: LabelProps) =>{

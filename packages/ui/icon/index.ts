@@ -1,5 +1,5 @@
-export { Icon } from "./Icon";
-export * from "./Icon.types";
-export * from "./Icon.util";
-export { SVG_ASSETS } from "../../assert/svg/index";
+export { Icon } from "./Icon.tsx";
+export * from "./Icon.types.ts";
+export * from "./Icon.util.ts";
+export { SVG_ASSETS } from "@assert/svg";
 

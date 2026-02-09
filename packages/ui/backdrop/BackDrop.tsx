@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
-import { cn } from '../../lib';
-import type { BackDropProps } from "./index";
+import { cn } from '@lib/index.ts';
+import type { BackDropProps } from "./BackDrop.types.ts";
 import styles from "./BackDrop.module.css";
 
-const BackDrop = ({
-                      visible = false,
-                      onClick,
-                      className,
-                      variant = "blur"
-                  }: BackDropProps) => {
+const BackDrop = ({visible = false, onClick, className, variant = "blur"}: BackDropProps) => {
     const [shouldRender, setRender] = useState(visible);
 
     useEffect(() => {
@@ -30,13 +25,7 @@ const BackDrop = ({
     if (!shouldRender) return null;
 
     return (
-        <div
-            className={cn(
-                styles.backdrop,
-                styles[variant],
-                visible && styles.isActive,
-                className
-            )}
+        <div className={cn(styles.backdrop, styles[variant], visible && styles.isActive, className)}
             onClick={onClick}
             aria-hidden={!visible}
         />

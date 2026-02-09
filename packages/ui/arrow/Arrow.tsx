@@ -1,9 +1,9 @@
 import React from "react";
 
 import { Icon } from "../icon";
-import {ArrowProps } from "./Arrow.types";
-import {DIRECTION_MAP} from "./Arrow.constant";
-import { cn } from "../../lib";
+import {ArrowProps } from "./Arrow.types.ts";
+import {DIRECTION_MAP} from "./Arrow.constant.ts";
+import { cn } from "@lib/index.ts";
 import styles from "./Arrow.module.css";
 
 const Arrow = ({ size = 24, direction = "down", className }: ArrowProps) => {

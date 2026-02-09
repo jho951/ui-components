@@ -1,8 +1,8 @@
 name: publish-npm
 on:
   push:
-    tags:
-      - "v*"
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -23,11 +23,13 @@ jobs:
           cache: "pnpm"
 
       - run: pnpm i --frozen-lockfile=false
-      - run: pnpm -C packages/ui test
-      - run: pnpm -C packages/ui build
+      - run: pnpm typecheck
+      - run: pnpm lint:perf
+      - run: pnpm -C packages build
+      - run: pnpm size
 
       - name: Publish to npm
-        working-directory: packages/ui
+        working-directory: packages
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

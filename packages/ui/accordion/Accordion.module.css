@@ -1,0 +1,43 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.item {
+  border: 1px solid var(--color-gray, #e6e9ef);
+  border-radius: 1rem;
+  background: var(--color-white, #ffffff);
+  overflow: hidden;
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--font-m, 1.6rem);
+  color: var(--color-black, #111111);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.panel {
+  padding: 0.6rem 1rem 1rem;
+  font-size: var(--font-s, 1.4rem);
+  color: var(--color-gray, #666666);
+}
+
+.icon {
+  font-size: 1.6rem;
+}
+
+.disabled {
+  opacity: 0.6;
+}

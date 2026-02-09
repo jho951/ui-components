@@ -1,0 +1,44 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.list {
+  display: flex;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page,
+.arrow {
+  border: 1px solid var(--color-gray, #e6e9ef);
+  background: var(--color-white, #ffffff);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-size: var(--font-s, 1.4rem);
+}
+
+.page:focus-visible,
+.arrow:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.active {
+  background: var(--color-primary, #333333);
+  color: var(--color-white, #ffffff);
+}
+
+.arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ellipsis {
+  padding: 0.4rem 0.6rem;
+  color: var(--color-gray, #8a8f98);
+}

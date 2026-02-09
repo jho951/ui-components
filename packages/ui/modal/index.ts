@@ -1,2 +1,2 @@
-export * from './Modal';
-export * from './Modal.types';
+export * from './Modal.tsx';
+export * from './Modal.types.ts';

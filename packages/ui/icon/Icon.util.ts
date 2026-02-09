@@ -1,5 +1,5 @@
 import React from "react";
-import type { IconData, IconRegistry } from "./Icon.types";
+import type { IconData, IconRegistry } from "./Icon.types.ts";
 
 const svgCache = new Map<string, string>();
 

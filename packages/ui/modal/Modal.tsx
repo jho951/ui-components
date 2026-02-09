@@ -2,9 +2,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 import { BackDrop } from "../backdrop";
-import type { ModalProps } from "./Modal.types";
-import { ensurePortalRoot, cn} from "../../lib";
-import { useScrollLock } from "../../hook";
+import type { ModalProps } from "./Modal.types.ts";
+import { ensurePortalRoot, cn} from "@lib/index.ts";
+import { useScrollLock } from "@hook/index.ts";
 import styles from "./Modal.module.css";
 
 const Modal = ({ isOpen, content, onClose, title = "미리보기", size = "medium" }: ModalProps) => {

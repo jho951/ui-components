@@ -5,8 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5e5b970-0a87-4d0e-ae5f-29986c6c786c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/SECURITY.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/SECURITY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/publish-npm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/publish-npm.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2026__1__12__19_52_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2026__1__12__19_52__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/assert/style/class.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/assert/style/class.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hook/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hook/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/lib/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/tsup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/tsup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/Arrow.constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/Arrow.constant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/Arrow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/Arrow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/backdrop/BackDrop.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/backdrop/BackDrop.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/backdrop/BackDrop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/backdrop/BackDrop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/backdrop/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/backdrop/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/button/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/card/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/card/Card.utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/card/Card.utils.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/card/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/card/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/checkbox/CheckBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/checkbox/CheckBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/checkbox/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/checkbox/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/divider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/divider/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/form/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/form/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/icon/Icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/icon/Icon.util.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/icon/Icon.util.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/icon/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/icon/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/label/Label.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/label/Label.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/label/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/label/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/modal/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/modal/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/modal/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/spinner/Spinner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/spinner/Spinner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/spinner/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/spinner/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/tag/Tag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tag/Tag.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/tag/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tag/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/textarea/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/textarea/Textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/textarea/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/textarea/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,14 +59,133 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="38QGCnoTrzhY9nBZyRx4WwMiuHf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "dev",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/jhons/Downloads/FE/ui-components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "ts.external.directory.path": "/Users/jhons/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/javascript-plugin/jsLanguageServicesImpl/external"
+    "nodejs_package_manager_path": "pnpm",
+    "npm.clean.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.storybook > dev.executor": "Run",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/jhons/Downloads/FE/ui-components/storybook/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.clean">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="clean" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="storybook &gt; dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/storybook/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.clean" />
+        <item itemvalue="npm.storybook &gt; dev" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5e5b970-0a87-4d0e-ae5f-29986c6c786c" name="Changes" comment="" />
+      <created>1768727134491</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768727134491</updated>
+      <workItem from="1768727136717" duration="515000" />
+      <workItem from="1768901708977" duration="2125000" />
+      <workItem from="1769425320522" duration="6487000" />
+      <workItem from="1770610158899" duration="7105000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/sss/vitest.config.ts</url>
+          <line>8</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/ui/icon/Icon.tsx</url>
+          <line>18</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

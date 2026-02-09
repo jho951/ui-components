@@ -1,0 +1,82 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: fit-content;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-size: var(--font-s, 1.4rem);
+  color: var(--color-black, #111111);
+}
+
+.control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-gray, #e6e9ef);
+  border-radius: var(--border-radius, 1rem);
+  background: var(--color-white, #ffffff);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.control:focus-within {
+  border-color: var(--color-primary, #333333);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.select {
+  width: 100%;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.6rem 2.2rem 0.6rem 0.9rem;
+  font-size: var(--font-m, 1.6rem);
+  color: var(--color-black, #111111);
+}
+
+.caret {
+  position: absolute;
+  right: 0.8rem;
+  pointer-events: none;
+  font-size: 1.2rem;
+  color: var(--color-gray, #8a8f98);
+}
+
+.helper {
+  font-size: var(--font-s, 1.3rem);
+  color: var(--color-gray, #8a8f98);
+}
+
+.error {
+  font-size: var(--font-s, 1.3rem);
+  color: var(--color-danger, #d64545);
+}
+
+.invalid {
+  border-color: var(--color-danger, #d64545);
+}
+
+.disabled {
+  background: var(--color-gray, #f4f5f7);
+  color: var(--color-gray, #8a8f98);
+}
+
+.s .select {
+  padding: 0.4rem 2.1rem 0.4rem 0.7rem;
+  font-size: var(--font-s, 1.4rem);
+}
+
+.m .select {
+  padding: 0.6rem 2.2rem 0.6rem 0.9rem;
+}
+
+.l .select {
+  padding: 0.8rem 2.3rem 0.8rem 1.1rem;
+  font-size: var(--font-l, 1.8rem);
+}

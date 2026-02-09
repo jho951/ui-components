@@ -1,5 +1,5 @@
-import type { TagProps } from "./index";
-import {cn} from '../../lib';
+import type { TagProps } from "./index.ts";
+import {cn} from '@lib/index.ts';
 import styles from "./Tag.module.css";
 
 const Tag = ({ active, color = 'default', children }: TagProps) => {
