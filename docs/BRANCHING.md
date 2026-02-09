@@ -5,7 +5,7 @@
 핵심 목표:
 - `dev`에서 Storybook 포함 개발을 허용
 - `main`에는 Storybook 관련 파일이 **절대 포함되지 않도록** 구조적으로 차단
-
+- 
 ---
 
 ## 1) 브랜치 역할
@@ -54,28 +54,31 @@ git merge origin/main
 
 ### C. dev 변경을 release/sync-main에 반영하기 (권장: packages만 가져오기)
 
-> `dev`를 그대로 merge 하면 Storybook이 유입될 수 있으므로, **필요한 경로만 선택적으로 반영**합니다.
+> `dev`를 그대로 merge 하면 Storybook이 유입되므로, **필요한 경로만 선택적으로 반영**합니다.
 
+#### 1) sync-main으로 이동 + 원격 최신화
 ```bash
-git checkout release/sync-main
-git fetch origin dev
 
-# ✅ dev의 packages만 반영
+git checkout release/sync-main
+git fetch --prune origin main dev
+```
+#### 2) sync-main은 항상 main 최신 유지
+``` bash
+git merge origin/main
+```
+#### 3) dev에서 packages만 반영 (storybook/산출물 제외)
+``` bash
 git restore --source origin/dev -- packages
 ```
-
-#### (선택) packages 안에 스토리 파일이 섞여 있다면 제거
-
+#### 4 (선택) packages 안에 스토리 파일이 섞여 있다면 제거
 ```bash
 # 스토리 파일이 있다면 main 반영 금지 정책에 따라 제거
 
 git ls-files packages | grep -E '\.stories\.' | xargs -I{} git rm "{}"
 git ls-files packages | grep -E '\.mdx$' | xargs -I{} git rm "{}"
 ```
-
-#### 커밋/푸시
-
-```bash
+#### 5) 커밋 & 푸시
+``` bash
 git add -A
 git commit -m "sync: bring packages from dev (no storybook)"
 git push origin release/sync-main
@@ -94,8 +97,8 @@ git push origin release/sync-main
 
 ### `refusing to merge unrelated histories`
 
-원인:
-- `release/sync-main`이 `main`에서 갈라진 브랜치가 아니라 다른 루트에서 시작된 경우
+#### 원인:
+> `release/sync-main`이 `main`에서 갈라진 브랜치가 아니라 다른 루트에서 시작된 경우
 
 해결(권장: main 기반으로 정렬):
 
