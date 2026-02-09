@@ -1,0 +1,25 @@
+# build outputs
+dist/
+packages/dist/
+storybook-static/
+
+# deps
+node_modules/
+packages/node_modules/
+
+# next / test
+.next/
+coverage/
+
+# package artifacts
+*.tgz
+
+# env
+.env*
+!.env.example
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
