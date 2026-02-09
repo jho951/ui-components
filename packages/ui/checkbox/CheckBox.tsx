@@ -1,5 +1,5 @@
 import React, {forwardRef, useEffect, useImperativeHandle, useRef,} from "react";
-import {generateId, cn} from '@/packages/lib';
+import {generateId, cn} from '@lib/index.ts';
 import { Icon } from "../icon";
 import { Label } from "../label";
 import type { CheckboxProps } from "./index.ts";

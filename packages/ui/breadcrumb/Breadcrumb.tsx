@@ -1,4 +1,4 @@
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { BreadcrumbProps } from "./Breadcrumb.types.ts";
 import styles from "./Breadcrumb.module.css";
 

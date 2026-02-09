@@ -1,4 +1,4 @@
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { AlertProps } from "./Alert.types.ts";
 import styles from "./Alert.module.css";
 

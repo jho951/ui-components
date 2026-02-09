@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { AvatarProps } from "./Avatar.types.ts";
 import styles from "./Avatar.module.css";
 

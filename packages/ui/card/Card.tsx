@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 
-import {cn} from '@/packages/lib';
+import {cn} from '@lib/index.ts';
 import { CardComponent, CardProps, createCardSection} from "./index.ts";
 import styles from "./Card.module.css";
 

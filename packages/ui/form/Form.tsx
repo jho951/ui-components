@@ -1,4 +1,4 @@
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { FormProps } from "./index.ts";
 import styles from "./Form.module.css";
 

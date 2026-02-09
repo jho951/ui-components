@@ -1,7 +1,7 @@
 import type { KeyboardEvent } from "react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { TabsProps } from "./Tabs.types.ts";
 import styles from "./Tabs.module.css";
 

@@ -1,6 +1,6 @@
 import { forwardRef, useId } from "react";
 
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { SelectProps } from "./Select.types.ts";
 import styles from "./Select.module.css";
 

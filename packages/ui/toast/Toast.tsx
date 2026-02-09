@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { ToastProps } from "./Toast.types.ts";
 import styles from "./Toast.module.css";
 

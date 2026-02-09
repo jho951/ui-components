@@ -1,5 +1,5 @@
 import React, {forwardRef, useEffect, useImperativeHandle, useRef} from "react";
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { TextareaProps } from "./index.ts";
 import styles from "./Textarea.module.css";
 

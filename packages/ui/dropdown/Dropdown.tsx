@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { DropdownProps } from "./Dropdown.types.ts";
 import styles from "./Dropdown.module.css";
 

@@ -1,6 +1,6 @@
 import { forwardRef, useId } from "react";
 
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { InputProps } from "./Input.types.ts";
 import styles from "./Input.module.css";
 

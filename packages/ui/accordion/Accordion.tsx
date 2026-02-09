@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { AccordionProps } from "./Accordion.types.ts";
 import styles from "./Accordion.module.css";
 

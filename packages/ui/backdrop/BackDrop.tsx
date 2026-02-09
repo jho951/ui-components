@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { cn } from '@/packages/lib';
+import { cn } from '@lib/index.ts';
 import type { BackDropProps } from "./BackDrop.types.ts";
 import styles from "./BackDrop.module.css";
 

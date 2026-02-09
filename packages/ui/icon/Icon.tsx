@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Icon.module.css";
 
-import { cn } from "@/packages/lib/cn.ts";
+import { cn } from "@lib/cn.ts";
 import type { IconProps, IconRegistry } from "./Icon.types.ts";
 import {
     extractSvgInner,
@@ -12,7 +12,7 @@ import {
     useInlineSvg,
 } from "./Icon.util.ts";
 
-import { SVG_ASSETS } from "@/packages/assert/svg";
+import { SVG_ASSETS } from "@assert/svg";
 
 const DEFAULT_ICONS: IconRegistry = Object.entries(SVG_ASSETS).reduce(
     (acc, [name, content]) => {

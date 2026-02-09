@@ -1,4 +1,4 @@
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { BadgeProps } from "./Badge.types.ts";
 import styles from "./Badge.module.css";
 

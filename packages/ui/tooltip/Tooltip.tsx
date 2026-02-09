@@ -1,6 +1,6 @@
 import { useId } from "react";
 
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { TooltipProps } from "./Tooltip.types.ts";
 import styles from "./Tooltip.module.css";
 

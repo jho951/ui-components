@@ -1,4 +1,4 @@
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { SkeletonProps } from "./Skeleton.types.ts";
 import styles from "./Skeleton.module.css";
 

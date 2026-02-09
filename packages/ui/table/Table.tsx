@@ -1,4 +1,4 @@
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { TableProps } from "./Table.types.ts";
 import styles from "./Table.module.css";
 

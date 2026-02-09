@@ -1,4 +1,4 @@
-import { cn } from "@/packages/lib";
+import { cn } from "@lib/index.ts";
 import type { PaginationProps } from "./Pagination.types.ts";
 import styles from "./Pagination.module.css";
 
