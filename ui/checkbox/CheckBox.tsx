@@ -1,8 +1,8 @@
 import React, {forwardRef, useEffect, useImperativeHandle, useRef,} from "react";
-import {generateId, cn} from '../../lib';
+import {generateId, cn} from '@lib/index.ts';
 import { Icon } from "../icon";
 import { Label } from "../label";
-import type { CheckboxProps } from "./index";
+import type { CheckboxProps } from "./index.ts";
 import styles from "./CheckBox.module.css";
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(

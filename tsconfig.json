@@ -7,15 +7,16 @@
     "declarationMap": true,
     "emitDeclarationOnly": false,
     "rootDir": ".",
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["*"],
       "@ui/*": ["ui/*"],
       "@hook/*": ["hook/*"],
       "@lib/*": ["lib/*"],
-      "@assert/*": ["assert/*"],
+      "@assert/*": ["assert/*"]
     }
   },
   "include": ["./**/*", "global.d.ts"],
-  "exclude": ["dist", "node_modules"]
+  "exclude": ["dist",
+    "node_modules"]
 }

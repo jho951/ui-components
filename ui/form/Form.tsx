@@ -1,5 +1,5 @@
-import { cn } from "../../lib";
-import type { FormProps } from "./index";
+import { cn } from "@lib/index.ts";
+import type { FormProps } from "./index.ts";
 import styles from "./Form.module.css";
 
 const Form = ({ children, onSubmit, className, ...rest }: FormProps) => {

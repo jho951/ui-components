@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 
 import { Spinner } from "../spinner";
-import {cn} from "../../lib";
-import type { BaseButtonProps, ButtonProps } from "./Button.types";
+import {cn} from "@lib/index.ts";
+import type { BaseButtonProps, ButtonProps } from "./Button.types.ts";
 import styles from "./Button.module.css";
 
 

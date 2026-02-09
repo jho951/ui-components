@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 
-import {cn} from '../../lib';
-import { CardComponent, CardProps, createCardSection} from "./index";
+import {cn} from '@lib/index.ts';
+import { CardComponent, CardProps, createCardSection} from "./index.ts";
 import styles from "./Card.module.css";
 
 const CardRoot = forwardRef<HTMLElement, CardProps>(

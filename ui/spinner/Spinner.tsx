@@ -1,5 +1,5 @@
-import type { SpinnerProps } from "./index";
-import {cn} from '../../lib';
+import type { SpinnerProps } from "./index.ts";
+import {cn} from '@lib/index.ts';
 import { Icon } from "../icon";
 import styles from "./Spinner.module.css";
 

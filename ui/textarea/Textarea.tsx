@@ -1,6 +1,6 @@
 import React, {forwardRef, useEffect, useImperativeHandle, useRef} from "react";
-import { cn } from "../../lib";
-import type { TextareaProps } from "./index";
+import { cn } from "@lib/index.ts";
+import type { TextareaProps } from "./index.ts";
 import styles from "./Textarea.module.css";
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(

@@ -1,2 +1,2 @@
-export * from './Form';
-export * from './Form.types';
+export * from './Form.tsx';
+export * from './Form.types.ts';

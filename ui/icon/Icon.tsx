@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Icon.module.css";
 
-import { cn } from "../../lib/cn";
-import type { IconProps, IconRegistry } from "./Icon.types";
+import { cn } from "@lib/cn.ts";
+import type { IconProps, IconRegistry } from "./Icon.types.ts";
 import {
     extractSvgInner,
     extractViewBox,
@@ -10,9 +10,9 @@ import {
     getRegistryIcon,
     resolveIconSrc,
     useInlineSvg,
-} from "./Icon.util";
+} from "./Icon.util.ts";
 
-import { SVG_ASSETS } from "../../assert/svg";
+import { SVG_ASSETS } from "@assert/svg";
 
 const DEFAULT_ICONS: IconRegistry = Object.entries(SVG_ASSETS).reduce(
     (acc, [name, content]) => {
@@ -60,9 +60,7 @@ const Icon = ({
         ...rest,
     };
 
-    // A) Registry 모드
     if (shouldUseRegistry && regData) {
-        // 이미 데이터가 파싱되어 있다면 (Vite + ?raw 환경 등)
         if (regData.raw || regData.g) {
             return (
                 <svg
@@ -81,8 +79,6 @@ const Icon = ({
         }
     }
 
-    // B) URL 모드 또는 Registry에 경로만 있는 경우 (Next.js 기본 설정 등)
-    // regData.src가 있으면 그것을 우선 사용하고 없으면 기본 규칙대로 경로 생성
     const finalSrc = regData?.src || resolveIconSrc(String(name), src, basePath, ext);
     const svgText = useInlineSvg(finalSrc);
 

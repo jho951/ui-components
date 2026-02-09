@@ -1,7 +1,7 @@
 import React from "react";
 
-import {cn} from '../../lib';
-import type { CardSectionType, SectionProps } from "./index";
+import {cn} from '@lib/index.ts';
+import type { CardSectionType, SectionProps } from "./index.ts";
 import styles from "./Card.module.css";
 
 /**
