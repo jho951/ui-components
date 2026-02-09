@@ -1,0 +1,58 @@
+name: PR Gate (main)
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  forbid_storybook_and_artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check forbidden paths in PR diff
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+
+          echo "Checking diff: $BASE..$HEAD"
+          CHANGED="$(git diff --name-only "$BASE" "$HEAD" || true)"
+          echo "$CHANGED"
+
+          # Forbidden patterns for main
+          PATTERN='(^storybook/|^\.storybook/|^storybook-static/|\.stories\.|\.mdx$|^dist/|^packages/dist/|^node_modules/|^packages/node_modules/|^\.next/|^coverage/)'
+
+          if echo "$CHANGED" | grep -E "$PATTERN" -n; then
+            echo ""
+            echo "❌ Forbidden files detected for main. Remove them from this PR."
+            exit 1
+          fi
+
+          echo "✅ OK: No forbidden files in PR diff."
+
+  build_ui_components:
+    runs-on: ubuntu-latest
+    needs: forbid_storybook_and_artifacts
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: "9"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build UI package
+        run: pnpm --filter @jho951/ui-components build
