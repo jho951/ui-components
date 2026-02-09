@@ -16,7 +16,9 @@
       "@assert/*": ["assert/*"]
     }
   },
-  "include": ["./**/*", "global.d.ts"],
+  "include": ["./**/*",
+    "packages/global.d.ts"
+  ],
   "exclude": ["dist",
     "node_modules"]
 }

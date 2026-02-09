@@ -1,0 +1,39 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  storybook-guard:
+    if: github.base_ref == 'main' || github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure Storybook is removed on main
+        run: |
+          if [ -d "storybook" ]; then
+            echo "storybook/ directory must not exist on main."
+            exit 1
+          fi
+
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - run: pnpm i --frozen-lockfile=false
+      - run: pnpm typecheck
+      - run: pnpm lint:perf
+      - run: pnpm -C packages build
+      - run: pnpm size
+      - run: pnpm audit:prod

@@ -1,0 +1,35 @@
+name: publish
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@jho951"
+          cache: "pnpm"
+
+      - run: pnpm i --frozen-lockfile=false
+      - run: pnpm -C packages/ui test
+      - run: pnpm -C packages/ui build
+
+      - name: Publish to GitHub Packages
+        run: npm publish
+        working-directory: packages/ui
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

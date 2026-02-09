@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": "./packages",
+    "paths": {
+      "@jho951/ui-components": ["packages/ui/index.ts"],
+      "@jho951/assets": ["packages/assert/*"]
+    }
+  }
+}
