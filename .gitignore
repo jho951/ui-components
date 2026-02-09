@@ -1,9 +1,23 @@
-node_modules
-dist
-.next
-coverage
+# dependencies
+node_modules/
+
+# build outputs
+dist/
+.next/
+storybook-static/
+
+# test / coverage
+coverage/
+
+# package artifacts
 *.tgz
-.DS_Store
+
+# env
 .env*
-.idea/*
-.idea
+!.env.example
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/

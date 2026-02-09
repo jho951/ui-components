@@ -5,51 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5e5b970-0a87-4d0e-ae5f-29986c6c786c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/SECURITY.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/SECURITY.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/publish-npm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/publish-npm.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2026__1__12__19_52_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2026__1__12__19_52__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/assert/style/class.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/assert/style/class.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hook/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hook/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/lib/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/tsup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/tsup.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/Arrow.constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/Arrow.constant.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/Arrow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/Arrow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/arrow/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/arrow/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/backdrop/BackDrop.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/backdrop/BackDrop.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/backdrop/BackDrop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/backdrop/BackDrop.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/backdrop/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/backdrop/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/button/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/card/Card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/card/Card.utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/card/Card.utils.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/card/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/card/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/checkbox/CheckBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/checkbox/CheckBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/checkbox/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/checkbox/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/divider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/divider/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/form/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/form/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/icon/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/icon/Icon.util.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/icon/Icon.util.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/icon/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/icon/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/label/Label.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/label/Label.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/label/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/label/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/modal/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/modal/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/modal/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/spinner/Spinner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/spinner/Spinner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/spinner/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/spinner/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/tag/Tag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tag/Tag.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/tag/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tag/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/textarea/Textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/textarea/Textarea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/textarea/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/textarea/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="release/sync-main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -85,7 +47,7 @@
     "npm.dev.executor": "Run",
     "npm.storybook > dev.executor": "Run",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/Users/jhons/Downloads/FE/ui-components/storybook/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/jhons/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -171,6 +133,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
