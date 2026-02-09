@@ -1,14 +1,12 @@
+# dependencies
+node_modules/
+
 # build outputs
 dist/
-packages/dist/
+.next/
 storybook-static/
 
-# deps
-node_modules/
-packages/node_modules/
-
-# next / test
-.next/
+# test / coverage
 coverage/
 
 # package artifacts
@@ -22,4 +20,4 @@ coverage/
 .DS_Store
 
 # IDE
-.idea/
+../../CT/Problem/.idea
