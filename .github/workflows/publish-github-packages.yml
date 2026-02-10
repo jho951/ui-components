@@ -15,7 +15,8 @@ jobs:
 
       - uses: pnpm/action-setup@v4
         with:
-          version: 9
+          # Use the pnpm version pinned in package.json#packageManager (e.g. pnpm@9.12.3)
+          run_install: false
 
       - uses: actions/setup-node@v4
         with:
@@ -24,7 +25,14 @@ jobs:
           scope: "@jho951"
           cache: "pnpm"
 
-      - run: pnpm i --frozen-lockfile=false
+      - name: Install deps
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            pnpm install --frozen-lockfile
+          else
+            pnpm install
+          fi
+
       - run: pnpm -C packages/ui test
       - run: pnpm -C packages/ui build
 
