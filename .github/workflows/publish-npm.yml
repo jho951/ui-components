@@ -36,7 +36,7 @@ jobs:
       - run: pnpm size
 
       - name: Publish to npm
-        working-directory: packages/ui
+        working-directory: packages
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
