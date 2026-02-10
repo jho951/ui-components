@@ -20,7 +20,7 @@ module.exports = {
   rules: {
     complexity: ['error', 15],
     'sonarjs/cognitive-complexity': ['error', 20],
-    'sonarjs/no-duplicate-string': ['warn', 5],
+    'sonarjs/no-duplicate-string': ['warn', { threshold: 5 }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-await-in-loop': 'error',
     'no-extra-boolean-cast': 'error',
