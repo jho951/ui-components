@@ -1,0 +1,23 @@
+{
+  "name": "ui-components-workspace",
+  "private": true,
+  "packageManager": "pnpm@9.12.3",
+  "scripts": {
+    "clean": "pnpm -r --if-present run clean && rimraf node_modules \"packages/**/node_modules\"",
+    "build": "pnpm -C packages build",
+    "lint:perf": "eslint \"packages/**/*.{ts,tsx}\" --max-warnings=0",
+    "lint:perf:fix": "eslint \"packages/**/*.{ts,tsx}\" --fix",
+    "typecheck": "tsc -p packages/tsconfig.json --noEmit",
+    "size": "size-limit",
+    "audit:prod": "pnpm audit --prod --audit-level=high"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-sonarjs": "^0.25.1",
+    "rimraf": "^6.1.2",
+    "size-limit": "^11.2.0"
+  }
+}
