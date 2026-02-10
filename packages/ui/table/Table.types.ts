@@ -9,7 +9,7 @@ export interface TableColumn<T> {
   width?: string;
 }
 
-export interface TableProps<T extends Record<string, any>> {
+export interface TableProps<T extends Record<string, ReactNode>> {
   columns: TableColumn<T>[];
   data: T[];
   caption?: string;
