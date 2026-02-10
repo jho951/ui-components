@@ -11,7 +11,7 @@
     "test:unit:watch": "pnpm -C storybook test:unit:watch",
     "lint:perf": "eslint \"packages/**/*.{ts,tsx}\" --max-warnings=0",
     "lint:perf:fix": "eslint \"packages/**/*.{ts,tsx}\" --fix",
-    "typecheck": "tsc -p packages/tsconfig.json --noEmit",
+    "typecheck": "pnpm -C packages exec tsc -p ./tsconfig.json --noEmit",
     "size": "size-limit",
     "audit:prod": "pnpm audit --prod --audit-level=high"
   },
