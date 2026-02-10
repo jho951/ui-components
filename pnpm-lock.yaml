@@ -26,9 +26,6 @@ importers:
       size-limit:
         specifier: ^11.2.0
         version: 11.2.0
-      typescript:
-        specifier: ^5.0.0
-        version: 5.9.3
 
   packages:
 
