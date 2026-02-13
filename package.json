@@ -1,10 +1,12 @@
 {
   "name": "ui-components-workspace",
   "private": true,
+  "publishConfig": { "access": "public" },
   "packageManager": "pnpm@9.12.3",
   "scripts": {
     "clean": "pnpm -r --if-present run clean && rimraf node_modules \"packages/**/node_modules\" \"storybook/**/node_modules\"",
     "build": "pnpm -C packages build",
+    "prepublishOnly": "pnpm run build",
     "dev": "pnpm -C storybook dev",
     "test:storybook": "pnpm -C storybook test:storybook",
     "test:unit": "pnpm -C storybook test:unit",
@@ -12,7 +14,7 @@
     "lint:perf": "eslint \"packages/**/*.{ts,tsx}\" --max-warnings=0",
     "lint:perf:fix": "eslint \"packages/**/*.{ts,tsx}\" --fix",
     "typecheck": "pnpm -C packages exec tsc -p ./tsconfig.json --noEmit",
-    "size": "size-limit",
+    "size": "size-limit --config size-limit.config.cjs",
     "audit:prod": "pnpm audit --prod --audit-level=high"
   },
   "devDependencies": {
@@ -23,5 +25,29 @@
     "eslint-plugin-sonarjs": "^0.25.1",
     "rimraf": "^6.1.2",
     "size-limit": "^11.2.0"
-  }
+  },
+  "size-limit": [
+    {
+      "path": "packages/dist/index.js",
+      "limit": "100 KB",
+      "running": false
+    },
+    {
+      "path": "packages/dist/index.js",
+      "limit": "30 KB",
+      "gzip": true,
+      "running": false
+    },
+    {
+      "path": "packages/dist/index.css",
+      "limit": "100 KB",
+      "webpack": false
+    },
+    {
+      "path": "packages/dist/index.css",
+      "limit": "30 KB",
+      "gzip": true,
+      "webpack": false
+    }
+  ]
 }
