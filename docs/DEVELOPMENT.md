@@ -35,7 +35,7 @@ pnpm -C storybook dev
 ## UI 라이브러리 빌드
 
 ```bash
-pnpm --filter @jho951/ui-components build
+pnpm run build
 ```
 
 ---
@@ -57,12 +57,22 @@ git rm -r --cached dist packages/dist node_modules packages/node_modules storybo
 
 ---
 
-## npm 배포(publish)
+## 배포/태그 자동화 (GitHub Actions)
 
 - Storybook은 배포하지 않습니다.
-- 배포는 `@jho951/ui-components`만 진행합니다.
+- 배포 대상은 `@jho951/ui-components`입니다.
+- `main`에 push하면 아래 순서로 자동 실행됩니다.
 
+1. `ci` 성공
+2. `publish-npm` 실행 및 npm publish
+3. `auto-tag-main` 실행 (`vX.Y.Z` 패치 버전 자동 증가)
+4. `publish-github-packages` 실행
+
+필수 시크릿:
+- npm 배포: `NPM_TOKEN`
+
+### 수동 배포(필요 시)
 ```bash
-pnpm --filter @jho951/ui-components build
-pnpm --filter @jho951/ui-components publish --access public
+pnpm run build
+pnpm -C packages publish --access public
 ```

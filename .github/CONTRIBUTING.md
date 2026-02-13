@@ -18,7 +18,7 @@ ui-components 모노레포에 기여해주셔서 감사합니다. 🙌
 ### 목표
 - 재사용 가능한 UI 컴포넌트를 **일관된 API / 스타일 / 접근성** 기준으로 제공
 - Storybook으로 컴포넌트 개발/검증을 빠르게 수행
-- `main` 브랜치 머지 후 CI에서 빌드 및 npm publish가 가능하도록 구성
+- `main` 브랜치 push 후 자동 파이프라인(`ci` → `publish-npm` → `auto-tag-main` → `publish-github-packages`)으로 배포
 
 ---
 
@@ -54,6 +54,7 @@ ui-components 모노레포에 기여해주셔서 감사합니다. 🙌
 - `dev`: 개발 브랜치 (Storybook 포함 가능)
 - `release/sync-main`: main 반영 전 **정리/검증** 브랜치 (**main 기반 유지**)
 - `main`: 배포/소비자 브랜치 (**Storybook 금지**)
+- `main` push는 자동 배포/태그 파이프라인의 시작점
 
 상세 흐름은 [`docs/BRANCHING.md`](./docs/BRANCHING.md) 를 참고하세요.
 
@@ -116,17 +117,19 @@ pnpm -C storybook dev
 배포 대상 패키지(`@jho951/ui-components`) 빌드:
 
 ```bash
-pnpm --filter @jho951/ui-components build
+pnpm run build
 ```
 
 ### 7-2. 배포(publish)
 - Storybook은 배포하지 않습니다.
-- 기본은 `@jho951/ui-components` 1개 패키지 기준으로 진행합니다.  
-  (필요 시 `packages/assert` 등은 별도 패키지로 배포)
+- 기본은 `main` push 기반 자동 배포입니다.
+- 자동 실행 순서: `ci` 성공 → `publish-npm` → `auto-tag-main`(패치 태그 증가) → `publish-github-packages`
+- npm publish에는 저장소 시크릿 `NPM_TOKEN`이 필요합니다.
+- 수동 배포가 필요한 경우에만 아래 명령을 사용합니다.
 
 ```bash
-pnpm --filter @jho951/ui-components build
-pnpm --filter @jho951/ui-components publish --access public
+pnpm run build
+pnpm -C packages publish --access public
 ```
 
 ---

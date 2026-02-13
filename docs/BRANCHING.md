@@ -21,6 +21,7 @@
 ### `main`
 - 배포/소비자 브랜치
 - Storybook 관련 파일 및 빌드 산출물 커밋 금지
+- `main` push 시 자동 파이프라인 실행: `ci` → `publish-npm` → `auto-tag-main` → `publish-github-packages`
 
 ---
 
@@ -90,6 +91,7 @@ git push origin release/sync-main
 
 - GitHub에서 `release/sync-main` → `main` PR 생성
 - 변경 파일 목록에 Storybook 관련 파일이 포함되지 않았는지 확인
+- 머지/푸시 후에는 GitHub Actions에서 자동 배포 체인 성공 여부를 확인
 
 ---
 

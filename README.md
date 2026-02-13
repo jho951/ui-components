@@ -52,6 +52,7 @@ import "@jho951/ui-components/utils.css";
 - 개발/Storybook/기여 가이드: [CONTRIBUTING.md](./.github/CONTRIBUTING.md)
 - 브랜치 운영(dev → release/sync-main → main): [docs/BRANCHING.md](./docs/BRANCHING.md)
 - 로컬 개발(설치/빌드/Storybook): [docs/DEVELOPMENT.md](./docs/DEVELOPMENT.md)
+- 배포 자동화(main push): `ci` → `publish-npm` → `auto-tag-main` → `publish-github-packages`
 
 ---
 
