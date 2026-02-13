@@ -1,11 +1,10 @@
-import { useId } from "react";
-
+import { useStableId } from "@hook/index.ts";
 import { cn } from "@lib/index.ts";
 import type { TooltipProps } from "./Tooltip.types.ts";
 import styles from "./Tooltip.module.css";
 
 const Tooltip = ({ content, children, position = "top" }: TooltipProps) => {
-  const tooltipId = useId();
+  const tooltipId = useStableId("tooltip");
 
   return (
     <span className={styles.wrapper} aria-describedby={tooltipId}>

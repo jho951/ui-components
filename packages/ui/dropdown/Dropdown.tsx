@@ -1,5 +1,6 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
+import { useStableId } from "@hook/index.ts";
 import { cn } from "@lib/index.ts";
 import type { DropdownProps } from "./Dropdown.types.ts";
 import styles from "./Dropdown.module.css";
@@ -18,7 +19,7 @@ const Dropdown = ({
   const [internalValue, setInternalValue] = useState<string | undefined>(value);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLUListElement>(null);
-  const baseId = useId();
+  const baseId = useStableId("dropdown");
 
   const currentValue = value ?? internalValue;
   const selectedItem = items.find((item) => item.value === currentValue);

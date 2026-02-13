@@ -1,12 +1,13 @@
 import type { KeyboardEvent } from "react";
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
+import { useStableId } from "@hook/index.ts";
 import { cn } from "@lib/index.ts";
 import type { TabsProps } from "./Tabs.types.ts";
 import styles from "./Tabs.module.css";
 
 const Tabs = ({ items, value, defaultValue, onChange }: TabsProps) => {
-  const baseId = useId();
+  const baseId = useStableId("tabs");
   const [internalValue, setInternalValue] = useState<string>(() => defaultValue ?? items[0]?.value ?? "");
   const currentValue = value ?? internalValue;
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);

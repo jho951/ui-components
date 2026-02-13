@@ -1,5 +1,6 @@
-import { forwardRef, useId } from "react";
+import { forwardRef } from "react";
 
+import { useStableId } from "@hook/index.ts";
 import { cn } from "@lib/index.ts";
 import type { SelectProps } from "./Select.types.ts";
 import styles from "./Select.module.css";
@@ -19,7 +20,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
     children,
     ...rest
   }, ref) => {
-    const autoId = useId();
+    const autoId = useStableId("select");
     const selectId = id ?? autoId;
     const helperId = helperText ? `${selectId}-helper` : undefined;
     const errorId = error ? `${selectId}-error` : undefined;
