@@ -6,7 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="0f5c2c87-e21a-4503-b1f2-f7b703036b45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/assert/style/class.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/assert/style/class.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/badge/Badge.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/badge/Badge.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/dropdown/Dropdown.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/dropdown/Dropdown.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/input/Input.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/input/Input.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/label/Label.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/label/Label.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/pagination/Pagination.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/pagination/Pagination.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/select/Select.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/select/Select.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/tabs/Tabs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tabs/Tabs.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/tag/Tag.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tag/Tag.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/textarea/Textarea.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/textarea/Textarea.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/tooltip/Tooltip.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tooltip/Tooltip.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,18 +26,39 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="39bkyU1vRjJeCadkPmmqMVJuAFX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "dev",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/jhons/Downloads/FE/ui-components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "ts.external.directory.path": "/Users/jhons/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/javascript-plugin/jsLanguageServicesImpl/external"
+    "nodejs_package_manager_path": "pnpm",
+    "npm.dev.executor": "Run",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/jhons/Library/Application Support/JetBrains/IntelliJIdea2025.2/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -36,7 +69,54 @@
       <recent name="$PROJECT_DIR$/.github/workflows" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ui-components" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ui-components" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f5c2c87-e21a-4503-b1f2-f7b703036b45" name="Changes" comment="" />
+      <created>1770972411213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770972411213</updated>
+      <workItem from="1770972412245" duration="5627000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

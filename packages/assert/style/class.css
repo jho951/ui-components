@@ -4,9 +4,21 @@
   --padding: 5%;
   --border: rgba(var(--color-black-rgb), 0.05);
   --radius: 2.4rem;
+  --border-radius: 1rem;
+  --base-radius: 1rem;
   --blur: 4px;
   --z-index: 1000;
   --gap: 1.6rem;
+  --font-xs: 1.2rem;
+  --font-s: 1.4rem;
+  --font-m: 1.6rem;
+  --font-l: 1.8rem;
+  --control-height-s: 3.6rem;
+  --control-height-m: 4.2rem;
+  --control-height-l: 4.8rem;
+  --button-size-s: 0.8rem 1.2rem;
+  --button-size-m: 1rem 1.6rem;
+  --button-size-l: 1.2rem 2rem;
   --shadow:
     0 0.1rem 0.4rem rgba(var(--color-black-rgb), 0.1),
     inset 0 0.1rem 0.1rem rgba(var(--color-bg-rgb), 0.5);
