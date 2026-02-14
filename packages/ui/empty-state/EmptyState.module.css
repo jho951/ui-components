@@ -1,0 +1,31 @@
+.root {
+  padding: 2rem;
+  border: 1px dashed var(--color-third-gray, #d4dbe3);
+  border-radius: 1.2rem;
+  text-align: center;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.icon {
+  margin: 0 auto;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--color-surface, #f4f7fa);
+}
+
+.title {
+  font-size: var(--font-m, 1.6rem);
+}
+
+.description {
+  font-size: var(--font-s, 1.4rem);
+  opacity: 0.8;
+}
+
+.action {
+  margin-top: 0.6rem;
+}

@@ -1,0 +1,20 @@
+.root {
+  position: relative;
+  display: inline-flex;
+}
+
+.panel {
+  position: absolute;
+  min-width: 18rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border, rgba(21,24,30,0.06));
+  background: var(--color-white, #ffffff);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 40;
+}
+
+.bottom { top: calc(100% + 0.6rem); left: 50%; transform: translateX(-50%); }
+.top { bottom: calc(100% + 0.6rem); left: 50%; transform: translateX(-50%); }
+.left { right: calc(100% + 0.6rem); top: 50%; transform: translateY(-50%); }
+.right { left: calc(100% + 0.6rem); top: 50%; transform: translateY(-50%); }
