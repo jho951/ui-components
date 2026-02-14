@@ -4,9 +4,16 @@ import { Tooltip } from "../../packages/ui/tooltip";
 import { Button } from "../../packages/ui/button";
 
 const meta = {
-  title: "Components/Tooltip",
+  title: "Feedback/Tooltip",
   component: Tooltip,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Tooltip component playground and prop controls.",
+      },
+    },
+  },
   args: {
     content: "Tooltip content",
     position: "top",

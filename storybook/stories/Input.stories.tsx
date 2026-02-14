@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Input } from "../../packages/ui/input";
 
 const meta = {
-  title: "Components/Input",
+  title: "Form/Input",
   component: Input,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Input component playground and prop controls.",
+      },
+    },
+  },
   args: {
     label: "Name",
     placeholder: "Enter your name",

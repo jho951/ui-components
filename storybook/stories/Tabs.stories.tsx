@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Tabs } from "../../packages/ui/tabs";
 
 const meta = {
-  title: "Components/Tabs",
+  title: "Navigation/Tabs",
   component: Tabs,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Tabs component playground and prop controls.",
+      },
+    },
+  },
   args: {
     items: [
       { value: "overview", label: "Overview", content: "Overview content" },

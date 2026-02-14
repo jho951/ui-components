@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Avatar } from "../../packages/ui/avatar";
 
 const meta = {
-  title: "Components/Avatar",
+  title: "Data Display/Avatar",
   component: Avatar,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Avatar component playground and prop controls.",
+      },
+    },
+  },
   args: {
     name: "Jhon Smith",
     size: "m",

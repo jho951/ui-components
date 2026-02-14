@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Label } from "../../packages/ui/label";
 
 const meta = {
-  title: "Components/Label",
+  title: "Form/Label",
   component: Label,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Label component playground and prop controls.",
+      },
+    },
+  },
   args: {
     children: "Email",
     required: true,

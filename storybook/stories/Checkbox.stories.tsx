@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Checkbox } from "../../packages/ui/checkbox";
 
 const meta = {
-  title: "Components/Checkbox",
+  title: "Form/Checkbox",
   component: Checkbox,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Checkbox component playground and prop controls.",
+      },
+    },
+  },
   args: {
     label: "약관에 동의합니다",
     checked: true,

@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Breadcrumb } from "../../packages/ui/breadcrumb";
 
 const meta = {
-  title: "Components/Breadcrumb",
+  title: "Navigation/Breadcrumb",
   component: Breadcrumb,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Breadcrumb component playground and prop controls.",
+      },
+    },
+  },
   args: {
     items: [
       { label: "Home", href: "#" },

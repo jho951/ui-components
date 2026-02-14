@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Dropdown } from "../../packages/ui/dropdown";
 
 const meta = {
-  title: "Components/Dropdown",
+  title: "Actions/Dropdown",
   component: Dropdown,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Dropdown component playground and prop controls.",
+      },
+    },
+  },
   args: {
     label: "카테고리",
     placeholder: "선택",

@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Select } from "../../packages/ui/select";
 
 const meta = {
-  title: "Components/Select",
+  title: "Form/Select",
   component: Select,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Select component playground and prop controls.",
+      },
+    },
+  },
   args: {
     label: "Role",
     placeholder: "Choose role",

@@ -5,9 +5,16 @@ import { Toast } from "../../packages/ui/toast";
 import { Button } from "../../packages/ui/button";
 
 const meta = {
-  title: "Components/Toast",
+  title: "Feedback/Toast",
   component: Toast,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Toast component playground and prop controls.",
+      },
+    },
+  },
   render: () => {
     const [open, setOpen] = useState(true);
 

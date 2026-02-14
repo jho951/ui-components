@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Card } from "../../packages/ui/card";
 
 const meta = {
-  title: "Components/Card",
+  title: "Data Display/Card",
   component: Card,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Card component playground and prop controls.",
+      },
+    },
+  },
   render: () => (
     <Card>
       <Card.Header>Header</Card.Header>

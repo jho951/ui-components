@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Tag } from "../../packages/ui/tag";
 
 const meta = {
-  title: "Components/Tag",
+  title: "Data Display/Tag",
   component: Tag,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Tag component playground and prop controls.",
+      },
+    },
+  },
   args: {
     children: "Active",
     color: "primary",

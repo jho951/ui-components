@@ -5,9 +5,16 @@ import { Modal } from "../../packages/ui/modal";
 import { Button } from "../../packages/ui/button";
 
 const meta = {
-  title: "Components/Modal",
+  title: "Feedback/Modal",
   component: Modal,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Modal component playground and prop controls.",
+      },
+    },
+  },
   render: () => {
     const [open, setOpen] = useState(false);
 

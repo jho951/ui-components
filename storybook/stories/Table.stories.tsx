@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Table } from "../../packages/ui/table";
 
 const meta = {
-  title: "Components/Table",
+  title: "Data Display/Table",
   component: Table,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Table component playground and prop controls.",
+      },
+    },
+  },
   args: {
     caption: "팀 구성",
     columns: [

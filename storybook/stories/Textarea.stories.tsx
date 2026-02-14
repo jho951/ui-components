@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Textarea } from "../../packages/ui/textarea";
 
 const meta = {
-  title: "Components/Textarea",
+  title: "Form/Textarea",
   component: Textarea,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Textarea component playground and prop controls.",
+      },
+    },
+  },
   args: {
     placeholder: "Write your message",
     rows: 4,

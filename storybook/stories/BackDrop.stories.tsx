@@ -3,9 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { BackDrop } from "../../packages/ui/backdrop";
 
 const meta = {
-  title: "Components/BackDrop",
+  title: "Feedback/BackDrop",
   component: BackDrop,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "BackDrop component playground and prop controls.",
+      },
+    },
+  },
   args: {
     visible: true,
     variant: "blur",
