@@ -6,18 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0f5c2c87-e21a-4503-b1f2-f7b703036b45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/assert/style/class.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/assert/style/class.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/badge/Badge.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/badge/Badge.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/button/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/button/Button.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/dropdown/Dropdown.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/dropdown/Dropdown.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/input/Input.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/input/Input.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/label/Label.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/label/Label.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/pagination/Pagination.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/pagination/Pagination.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/select/Select.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/select/Select.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/tabs/Tabs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tabs/Tabs.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/tag/Tag.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tag/Tag.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/textarea/Textarea.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/textarea/Textarea.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ui/tooltip/Tooltip.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tooltip/Tooltip.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
