@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { expect, userEvent, within } from "@storybook/test";
 
 import { DataGrid } from "../../packages/ui/data-grid";
 
@@ -33,3 +34,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+Default.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  const sortByName = await canvas.findByRole("button", { name: /sort by name/i });
+
+  await userEvent.click(sortByName);
+  expect(sortByName.closest("th")).toHaveAttribute("aria-sort", "ascending");
+
+  await userEvent.click(sortByName);
+  expect(sortByName.closest("th")).toHaveAttribute("aria-sort", "descending");
+};

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { expect, fireEvent, userEvent, within } from "@storybook/test";
 
 import { ContextMenu, Menu } from "../../packages/ui/menu";
 
@@ -34,4 +35,24 @@ export const WithContextMenu: Story = {
       <div style={{ padding: 24, border: "1px dashed #ccc", borderRadius: 8 }}>Right click here</div>
     </ContextMenu>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const target = await canvas.findByText("Right click here");
+
+    fireEvent.contextMenu(target);
+
+    const openItem = await canvas.findByRole("menuitem", { name: "Open" });
+    expect(openItem).toHaveFocus();
+
+    await userEvent.keyboard("{ArrowDown}");
+    const renameItem = await canvas.findByRole("menuitem", { name: "Rename" });
+    expect(renameItem).toHaveFocus();
+
+    await userEvent.keyboard("{End}");
+    const deleteItem = await canvas.findByRole("menuitem", { name: "Delete" });
+    expect(deleteItem).toHaveFocus();
+
+    await userEvent.keyboard("{Escape}");
+    expect(canvas.queryByRole("menu")).not.toBeInTheDocument();
+  },
 };

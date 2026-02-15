@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { expect, userEvent, within } from "@storybook/test";
 
 import { RichTextEditor } from "../../packages/ui/rich-text-editor";
 
@@ -23,3 +24,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+Default.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  const editor = await canvas.findByRole("textbox", { name: "Rich text editor" });
+  const bold = await canvas.findByRole("button", { name: "Bold" });
+
+  await userEvent.click(editor);
+  await userEvent.keyboard("{Control>}a{/Control}");
+  await userEvent.keyboard("{Control>}b{/Control}");
+
+  expect(bold).toHaveAttribute("aria-pressed", "true");
+};
