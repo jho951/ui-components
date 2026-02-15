@@ -1,6 +1,5 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 
-import { useStableId } from "@hook/index.ts";
 import { cn } from "@lib/index.ts";
 import type { InputProps } from "./Input.types.ts";
 import styles from "./Input.module.css";
@@ -19,7 +18,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     disabled,
     ...rest
   }, ref) => {
-    const autoId = useStableId("input");
+    const autoId = useId();
     const inputId = id ?? autoId;
     const helperId = helperText ? `${inputId}-helper` : undefined;
     const errorId = error ? `${inputId}-error` : undefined;

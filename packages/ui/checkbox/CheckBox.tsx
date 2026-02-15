@@ -1,6 +1,5 @@
 import React, {forwardRef, useEffect, useImperativeHandle, useRef,} from "react";
 import {generateId, cn} from '@lib/index.ts';
-import { Icon } from "../icon";
 import { Label } from "../label";
 import type { CheckboxProps } from "./index.ts";
 import styles from "./CheckBox.module.css";
@@ -19,12 +18,8 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         return (
             <Label htmlFor={id} className={cn(styles.container, rest.disabled && styles.disabled, className)}>
                 <div className={styles.wrapper}>
-                    <input id={id} className='sr-only' type="checkbox" ref={inputRef} {...rest}/>
-                    <div className={cn(styles.styledBox, error && styles.error, rest.checked && styles.checked, indeterminate && styles.indeterminate,)}>
-                        {(rest.checked || indeterminate) && (
-                          <Icon name={indeterminate ? "indeterminate" : "check"} />
-                        )}
-                    </div>
+                    <input id={id} className={cn("sr-only", styles.input)} type="checkbox" ref={inputRef} {...rest}/>
+                    <span className={cn(styles.styledBox, error && styles.error)} aria-hidden="true" />
                 </div>
                 {label && <span className={styles.labelText}>{label}</span>}
             </Label>

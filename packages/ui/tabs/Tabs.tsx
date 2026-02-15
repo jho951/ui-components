@@ -1,13 +1,12 @@
 import type { KeyboardEvent } from "react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 
-import { useStableId } from "@hook/index.ts";
 import { cn } from "@lib/index.ts";
 import type { TabsProps } from "./Tabs.types.ts";
 import styles from "./Tabs.module.css";
 
-const Tabs = ({ items, value, defaultValue, onChange }: TabsProps) => {
-  const baseId = useStableId("tabs");
+const Tabs = ({ items, value, defaultValue, onChange, orientation = "horizontal", closable = false, onCloseTab }: TabsProps) => {
+  const baseId = useId();
   const [internalValue, setInternalValue] = useState<string>(() => defaultValue ?? items[0]?.value ?? "");
   const currentValue = value ?? internalValue;
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
@@ -30,8 +29,13 @@ const Tabs = ({ items, value, defaultValue, onChange }: TabsProps) => {
     const lastIndex = items.length - 1;
     let nextIndex = activeIndex;
 
-    if (event.key === "ArrowRight") nextIndex = activeIndex === lastIndex ? 0 : activeIndex + 1;
-    if (event.key === "ArrowLeft") nextIndex = activeIndex <= 0 ? lastIndex : activeIndex - 1;
+    if (orientation === "horizontal") {
+      if (event.key === "ArrowRight") nextIndex = activeIndex === lastIndex ? 0 : activeIndex + 1;
+      if (event.key === "ArrowLeft") nextIndex = activeIndex <= 0 ? lastIndex : activeIndex - 1;
+    } else {
+      if (event.key === "ArrowDown") nextIndex = activeIndex === lastIndex ? 0 : activeIndex + 1;
+      if (event.key === "ArrowUp") nextIndex = activeIndex <= 0 ? lastIndex : activeIndex - 1;
+    }
     if (event.key === "Home") nextIndex = 0;
     if (event.key === "End") nextIndex = lastIndex;
 
@@ -46,8 +50,8 @@ const Tabs = ({ items, value, defaultValue, onChange }: TabsProps) => {
   };
 
   return (
-    <div className={styles.root}>
-      <div className={styles.tablist} role="tablist" aria-orientation="horizontal" onKeyDown={handleKeyDown}>
+    <div className={cn(styles.root, orientation === "vertical" && styles.verticalRoot)}>
+      <div className={cn(styles.tablist, orientation === "vertical" && styles.verticalTablist)} role="tablist" aria-orientation={orientation} onKeyDown={handleKeyDown}>
         {items.map((item, index) => {
           const selected = item.value === currentValue;
           return (
@@ -64,7 +68,28 @@ const Tabs = ({ items, value, defaultValue, onChange }: TabsProps) => {
               disabled={item.disabled}
               onClick={() => !item.disabled && setValue(item.value)}
             >
-              {item.label}
+              <span className={styles.tabLabel}>{item.label}</span>
+              {closable && (
+                <span
+                  className={styles.close}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Close ${item.value}`}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    onCloseTab?.(item.value);
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      onCloseTab?.(item.value);
+                    }
+                  }}
+                >
+                  ×
+                </span>
+              )}
             </button>
           );
         })}

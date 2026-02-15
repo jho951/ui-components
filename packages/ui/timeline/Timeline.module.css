@@ -1,0 +1,45 @@
+.list {
+  display: grid;
+  gap: 1rem;
+  margin-left: 0.8rem;
+}
+
+.item {
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  background: var(--color-primary, #78b5ee);
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  top: 1.6rem;
+  bottom: -1rem;
+  width: 1px;
+  background: var(--color-third-gray, #d4dbe3);
+}
+
+.item:last-child::after {
+  display: none;
+}
+
+.title {
+  font-size: var(--font-s, 1.4rem);
+}
+
+.description,
+.time {
+  font-size: var(--font-xs, 1.2rem);
+  opacity: 0.85;
+}
