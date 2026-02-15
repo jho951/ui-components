@@ -1,0 +1,44 @@
+.container {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-index, 1000) + 120);
+  display: grid;
+  place-items: end center;
+  padding: 2rem;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.card {
+  position: relative;
+  width: min(90vw, 44rem);
+  border-radius: 1rem;
+  border: 1px solid var(--color-border, rgba(21,24,30,0.08));
+  background: var(--color-white, #fff);
+  padding: 1.2rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.title {
+  font-size: var(--font-m, 1.6rem);
+}
+
+.description {
+  font-size: var(--font-s, 1.4rem);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  border: 1px solid var(--color-third-gray, #d4dbe3);
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.8rem;
+}

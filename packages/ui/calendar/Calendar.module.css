@@ -1,0 +1,41 @@
+.root {
+  width: 100%;
+  max-width: 32rem;
+  border: 1px solid var(--color-border, rgba(21,24,30,0.08));
+  border-radius: 1rem;
+  padding: 0.8rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.nav {
+  border: 0;
+  background: transparent;
+  padding: 0.4rem 0.6rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.2rem;
+}
+
+.cell {
+  min-height: 3.2rem;
+  border: 0;
+  border-radius: 0.6rem;
+  background: transparent;
+}
+
+.cell:hover {
+  background: var(--color-surface, #f4f7fa);
+}
+
+.selected {
+  background: rgba(var(--color-primary-rgb), 0.2);
+}

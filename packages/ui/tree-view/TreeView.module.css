@@ -1,0 +1,30 @@
+.list {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.toggle,
+.label {
+  border: 0;
+  background: transparent;
+  font-size: var(--font-s, 1.4rem);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.6rem;
+}
+
+.label:hover,
+.toggle:hover {
+  background: var(--color-surface, #f4f7fa);
+}
+
+.children {
+  margin-left: 1.6rem;
+  border-left: 1px dashed var(--color-third-gray, #d4dbe3);
+  padding-left: 0.8rem;
+}

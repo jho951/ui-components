@@ -12,4 +12,7 @@ export interface TabsProps {
   value?: string;
   defaultValue?: string;
   onChange?: (value: string) => void;
+  orientation?: "horizontal" | "vertical";
+  closable?: boolean;
+  onCloseTab?: (value: string) => void;
 }

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
 
 import { Tabs } from "../../packages/ui/tabs";
 
@@ -27,3 +28,23 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const Vertical: Story = {
+  args: {
+    orientation: "vertical",
+  },
+};
+
+export const Closable: Story = {
+  render: (args) => {
+    const [items, setItems] = useState(args.items ?? []);
+    return (
+      <Tabs
+        {...args}
+        items={items}
+        closable
+        onCloseTab={(value) => setItems((prev) => prev.filter((item) => item.value !== value))}
+      />
+    );
+  },
+};
