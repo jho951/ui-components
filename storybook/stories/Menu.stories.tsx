@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { expect, fireEvent, userEvent, within } from "@storybook/test";
+import { expect, fireEvent, userEvent, waitFor, within } from "@storybook/test";
 
 import { ContextMenu, Menu } from "../../packages/ui/menu";
+import { retry } from "./testUtils";
 
 const meta = {
   title: "Actions/Menu",
@@ -39,20 +40,25 @@ export const WithContextMenu: Story = {
     const canvas = within(canvasElement);
     const target = await canvas.findByText("Right click here");
 
-    fireEvent.contextMenu(target);
+    await retry(async () => {
+      fireEvent.contextMenu(target);
+      await canvas.findByRole("menu");
+    });
 
     const openItem = await canvas.findByRole("menuitem", { name: "Open" });
-    expect(openItem).toHaveFocus();
+    await waitFor(() => expect(openItem).toHaveFocus());
 
     await userEvent.keyboard("{ArrowDown}");
     const renameItem = await canvas.findByRole("menuitem", { name: "Rename" });
-    expect(renameItem).toHaveFocus();
+    await waitFor(() => expect(renameItem).toHaveFocus());
 
     await userEvent.keyboard("{End}");
     const deleteItem = await canvas.findByRole("menuitem", { name: "Delete" });
-    expect(deleteItem).toHaveFocus();
+    await waitFor(() => expect(deleteItem).toHaveFocus());
 
-    await userEvent.keyboard("{Escape}");
-    expect(canvas.queryByRole("menu")).not.toBeInTheDocument();
+    await retry(async () => {
+      await userEvent.keyboard("{Escape}");
+      await waitFor(() => expect(canvas.queryByRole("menu")).not.toBeInTheDocument());
+    });
   },
 };

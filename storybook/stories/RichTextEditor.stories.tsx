@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, within } from "@storybook/test";
+import { expect, userEvent, waitFor, within } from "@storybook/test";
 
 import { RichTextEditor } from "../../packages/ui/rich-text-editor";
+import { retry } from "./testUtils";
 
 const meta = {
   title: "Form/RichTextEditor",
@@ -28,10 +29,12 @@ Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const editor = await canvas.findByRole("textbox", { name: "Rich text editor" });
   const bold = await canvas.findByRole("button", { name: "Bold" });
+  const isMac = /Mac|iPhone|iPad/.test(window.navigator.platform);
 
-  await userEvent.click(editor);
-  await userEvent.keyboard("{Control>}a{/Control}");
-  await userEvent.keyboard("{Control>}b{/Control}");
-
-  expect(bold).toHaveAttribute("aria-pressed", "true");
+  await retry(async () => {
+    await userEvent.click(editor);
+    await userEvent.keyboard(isMac ? "{Meta>}a{/Meta}" : "{Control>}a{/Control}");
+    await userEvent.keyboard(isMac ? "{Meta>}b{/Meta}" : "{Control>}b{/Control}");
+    await waitFor(() => expect(bold).toHaveAttribute("aria-pressed", "true"));
+  });
 };

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
 import { OtpInput } from "../../packages/ui/otp-input";
 
@@ -8,6 +9,7 @@ const meta = {
   tags: ["autodocs"],
   args: {
     length: 6,
+    onChange: fn(),
   },
 } satisfies Meta<typeof OtpInput>;
 

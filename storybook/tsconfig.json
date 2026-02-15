@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "baseUrl": "../packages",
+    "paths": {
+      "@/*": ["*"],
+      "@ui/*": ["ui/*"],
+      "@hook/*": ["hook/*"],
+      "@lib/*": ["lib/*"],
+      "@assert/*": ["assert/*"]
+    }
+  },
+  "include": [".storybook/**/*", "stories/**/*", "../packages/global.d.ts"]
+}

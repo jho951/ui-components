@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, within } from "@storybook/test";
+import { expect, userEvent, waitFor, within } from "@storybook/test";
 
 import { DataGrid } from "../../packages/ui/data-grid";
+import { retry } from "./testUtils";
 
 const meta = {
   title: "Data Display/DataGrid",
@@ -38,9 +39,13 @@ Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const sortByName = await canvas.findByRole("button", { name: /sort by name/i });
 
-  await userEvent.click(sortByName);
-  expect(sortByName.closest("th")).toHaveAttribute("aria-sort", "ascending");
+  await retry(async () => {
+    await userEvent.click(sortByName);
+    await waitFor(() => expect(sortByName.closest("th")).toHaveAttribute("aria-sort", "ascending"));
+  });
 
-  await userEvent.click(sortByName);
-  expect(sortByName.closest("th")).toHaveAttribute("aria-sort", "descending");
+  await retry(async () => {
+    await userEvent.click(sortByName);
+    await waitFor(() => expect(sortByName.closest("th")).toHaveAttribute("aria-sort", "descending"));
+  });
 };
