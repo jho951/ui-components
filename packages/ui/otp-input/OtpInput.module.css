@@ -1,0 +1,18 @@
+.root {
+  display: inline-flex;
+  gap: 0.6rem;
+}
+
+.input {
+  width: 3.6rem;
+  height: 4.2rem;
+  text-align: center;
+  border: 1px solid var(--color-third-gray, #d4dbe3);
+  border-radius: 0.8rem;
+  font-size: var(--font-m, 1.6rem);
+}
+
+.input:focus-visible {
+  outline: 2px solid rgba(var(--color-primary-rgb), 0.4);
+  outline-offset: 1px;
+}

@@ -4,20 +4,36 @@
   gap: 1rem;
 }
 
+.verticalRoot {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 .tablist {
   display: flex;
   gap: 0.6rem;
   border-bottom: 1px solid var(--color-gray, #e6e9ef);
 }
 
+.verticalTablist {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: 1px solid var(--color-gray, #e6e9ef);
+  padding-right: 0.8rem;
+}
+
 .tab {
   border: none;
   background: transparent;
-  padding: 0.6rem 0.8rem;
+  min-height: var(--control-height-s, 3.6rem);
+  padding: 0.6rem 1rem;
   cursor: pointer;
   font-size: var(--font-s, 1.4rem);
   color: var(--color-gray, #666666);
   border-bottom: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .tab:focus-visible {
@@ -38,4 +54,20 @@
 .panel {
   font-size: var(--font-s, 1.4rem);
   color: var(--color-black, #111111);
+}
+
+.tabLabel {
+  display: inline-block;
+}
+
+.close {
+  display: inline-grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+}
+
+.close:hover {
+  background: var(--color-surface, #f4f7fa);
 }

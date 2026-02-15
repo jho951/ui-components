@@ -60,21 +60,23 @@ const Icon = ({
         ...rest,
     };
 
-    if (shouldUseRegistry && regData && (regData.raw || regData.g)) {
-        return (
-            <svg
-                viewBox={regData.vb}
-                className={cn(styles.icon, styles.registry, className)}
-                {...svgCommonProps}
-            >
-                {regData.g?.map(({ el, ...attrs }, i) =>
-                    React.createElement(el, { key: i, ...attrs })
-                )}
-                {regData.raw && (
-                    <g dangerouslySetInnerHTML={{ __html: regData.raw }} />
-                )}
-            </svg>
-        );
+    if (shouldUseRegistry && regData) {
+        if (regData.raw || regData.g) {
+            return (
+                <svg
+                    viewBox={regData.vb}
+                    className={cn(styles.icon, styles.registry, className)}
+                    {...svgCommonProps}
+                >
+                    {regData.g?.map(({ el, ...attrs }, i) =>
+                        React.createElement(el, { key: i, ...attrs })
+                    )}
+                    {regData.raw && (
+                        <g dangerouslySetInnerHTML={{ __html: regData.raw }} />
+                    )}
+                </svg>
+            );
+        }
     }
 
     const finalSrc = regData?.src || resolveIconSrc(String(name), src, basePath, ext);
