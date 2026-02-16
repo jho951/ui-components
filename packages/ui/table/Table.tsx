@@ -1,8 +1,10 @@
+import type { ReactNode } from "react";
+
 import { cn } from "@lib/index.ts";
 import type { TableProps } from "./Table.types.ts";
 import styles from "./Table.module.css";
 
-const Table = <T extends Record<string, any>>({ columns, data, caption, striped = false, compact = false }: TableProps<T>) => {
+const Table = <T extends Record<string, ReactNode>>({ columns, data, caption, striped = false, compact = false }: TableProps<T>) => {
   return (
     <div className={styles.wrapper}>
       <table className={cn(styles.table, striped && styles.striped, compact && styles.compact)}>
