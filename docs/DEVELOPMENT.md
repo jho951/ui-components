@@ -71,6 +71,9 @@ git rm -r --cached dist packages/dist node_modules packages/node_modules storybo
 필수 시크릿:
 - npm 배포: `NPM_TOKEN`
 
+현재 버전
+v1.0.3
+
 ### 수동 배포(필요 시)
 ```bash
 pnpm run build
