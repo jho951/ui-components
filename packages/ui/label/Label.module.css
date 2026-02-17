@@ -1,13 +1,22 @@
+@import "../styles/tokens.css";
+
+
+:global(:where(*, *::before, *::after)) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .label {
   display: block;
   font-size: var(--font-s, 1.4rem);
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-text, #22303c);
   margin-bottom: 0.4rem;
 }
 
 .required {
-  color: var(--color-danger);
+  color: var(--color-danger, #ff99a0);
   margin-left: 0.25rem;
 }
 
@@ -25,7 +34,7 @@
 .capsule {
   display: inline-block;
   background: rgba(var(--color-primary-rgb), 0.1);
-  color: var(--color-primary);
+  color: var(--color-primary, #78b5ee);
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
   font-size: var(--font-xs, 1.2rem);
@@ -34,7 +43,7 @@
 
 /* Variant: error */
 .error {
-  color: var(--color-danger);
+  color: var(--color-danger, #ff99a0);
 }
 
 .floating {
@@ -42,7 +51,7 @@
   top: 0.5rem;
   left: 1rem;
   font-size: var(--font-xs, 1.2rem);
-  color: var(--color-secondary-gray);
+  color: var(--color-secondary-gray, #dde3ea);
   pointer-events: none;
   transition: 0.2s ease;
 }

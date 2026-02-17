@@ -35,16 +35,6 @@ import { /* ... */ } from "@jho951/ui-components";
 import { Button, Card } from "@jho951/ui-components/ui";
 ```
 
-### 스타일(CSS) import
-
-필요 시 아래 CSS 엔트리들을 가져올 수 있습니다.
-
-```ts
-import "@jho951/ui-components/reset.css";
-import "@jho951/ui-components/theme.css";
-import "@jho951/ui-components/utils.css";
-```
-
 ---
 
 ## 문서

@@ -24,10 +24,7 @@
     "./assert": {
       "types": "./dist/assert/index.d.ts",
       "import": "./dist/assert/index.js"
-    },
-    "./theme.css": "./dist/assert/style/theme.css",
-    "./reset.css": "./dist/assert/style/reset.css",
-    "./utils.css": "./dist/assert/style/class.css"
+    }
   },
   "peerDependencies": {
     "react": ">=18",
