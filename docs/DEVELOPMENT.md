@@ -40,6 +40,26 @@ pnpm run build
 
 ---
 
+## sync-main 운영 (dev 반영 + Storybook 자동 제외)
+
+`release/sync-main` 브랜치에서만 실행:
+
+```bash
+git checkout release/sync-main
+git pull origin release/sync-main
+pnpm run sync-main
+```
+
+실행 후:
+
+```bash
+git status
+git commit -m "sync: merge dev without storybook"
+git push origin release/sync-main
+```
+
+---
+
 ## 로컬에서 "main 금지 파일" 확인 팁
 
 아래 파일/폴더가 커밋에 섞이지 않도록 주의합니다.
