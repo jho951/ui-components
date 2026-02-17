@@ -40,17 +40,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "pnpm"
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           # Use the pnpm version pinned in package.json#packageManager (e.g. pnpm@9.12.3)
           run_install: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
 
       - name: Install dependencies
         run: |
