@@ -26,11 +26,6 @@ const DataGrid = <T extends Record<string, unknown>>({ columns, rows, searchable
     });
   }, [query, rows, sortKey, sortDir]);
 
-  const getAriaSort = (columnKey: string): "none" | "ascending" | "descending" => {
-    if (sortKey !== columnKey) return "none";
-    return sortDir === "asc" ? "ascending" : "descending";
-  };
-
   return (
     <section className={styles.wrapper}>
       {searchable && (
@@ -49,37 +44,37 @@ const DataGrid = <T extends Record<string, unknown>>({ columns, rows, searchable
       <table className={styles.table} role="grid">
         <thead>
           <tr>
-            {columns.map((column) => {
-              let sortIcon = "";
-              if (sortKey === column.key) {
-                sortIcon = sortDir === "asc" ? "▲" : "▼";
-              }
-              return (
-                <th
-                  key={column.key}
-                  aria-sort={getAriaSort(column.key)}
-                >
-                  {column.sortable ? (
-                    <button
-                      type="button"
-                      className={styles.sortBtn}
-                      aria-label={`Sort by ${String(column.header)}`}
-                      onClick={() => {
-                        if (sortKey === column.key) setSortDir((prev) => (prev === "asc" ? "desc" : "asc"));
-                        else {
-                          setSortKey(column.key);
-                          setSortDir("asc");
-                        }
-                      }}
-                    >
-                      {column.header} {sortIcon}
-                    </button>
-                  ) : (
-                    column.header
-                  )}
-                </th>
-              );
-            })}
+            {columns.map((column) => (
+              <th
+                key={column.key}
+                aria-sort={
+                  sortKey === column.key
+                    ? sortDir === "asc"
+                      ? "ascending"
+                      : "descending"
+                    : "none"
+                }
+              >
+                {column.sortable ? (
+                  <button
+                    type="button"
+                    className={styles.sortBtn}
+                    aria-label={`Sort by ${String(column.header)}`}
+                    onClick={() => {
+                      if (sortKey === column.key) setSortDir((prev) => (prev === "asc" ? "desc" : "asc"));
+                      else {
+                        setSortKey(column.key);
+                        setSortDir("asc");
+                      }
+                    }}
+                  >
+                    {column.header} {sortKey === column.key ? (sortDir === "asc" ? "▲" : "▼") : ""}
+                  </button>
+                ) : (
+                  column.header
+                )}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody id={bodyId}>

@@ -1,3 +1,12 @@
+@import "../styles/tokens.css";
+
+
+:global(:where(*, *::before, *::after)) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .menu {
   min-width: 18rem;
   padding: 0.4rem;

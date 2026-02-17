@@ -5,34 +5,6 @@ import { cn } from "@lib/index.ts";
 import type { TabsProps } from "./Tabs.types.ts";
 import styles from "./Tabs.module.css";
 
-function getArrowNextIndex(
-  orientation: "horizontal" | "vertical",
-  key: string,
-  activeIndex: number,
-  lastIndex: number
-): number | null {
-  if (orientation === "horizontal") {
-    if (key === "ArrowRight") return activeIndex === lastIndex ? 0 : activeIndex + 1;
-    if (key === "ArrowLeft") return activeIndex <= 0 ? lastIndex : activeIndex - 1;
-    return null;
-  }
-
-  if (key === "ArrowDown") return activeIndex === lastIndex ? 0 : activeIndex + 1;
-  if (key === "ArrowUp") return activeIndex <= 0 ? lastIndex : activeIndex - 1;
-  return null;
-}
-
-function getNavNextIndex(
-  orientation: "horizontal" | "vertical",
-  key: string,
-  activeIndex: number,
-  lastIndex: number
-): number | null {
-  if (key === "Home") return 0;
-  if (key === "End") return lastIndex;
-  return getArrowNextIndex(orientation, key, activeIndex, lastIndex);
-}
-
 const Tabs = ({ items, value, defaultValue, onChange, orientation = "horizontal", closable = false, onCloseTab }: TabsProps) => {
   const baseId = useId();
   const [internalValue, setInternalValue] = useState<string>(() => defaultValue ?? items[0]?.value ?? "");
@@ -55,15 +27,26 @@ const Tabs = ({ items, value, defaultValue, onChange, orientation = "horizontal"
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (!items.length) return;
     const lastIndex = items.length - 1;
-    const nextIndex = getNavNextIndex(orientation, event.key, activeIndex, lastIndex);
-    if (nextIndex === null || nextIndex === activeIndex) return;
+    let nextIndex = activeIndex;
 
-    event.preventDefault();
-    const nextItem = items[nextIndex];
-    if (nextItem.disabled) return;
+    if (orientation === "horizontal") {
+      if (event.key === "ArrowRight") nextIndex = activeIndex === lastIndex ? 0 : activeIndex + 1;
+      if (event.key === "ArrowLeft") nextIndex = activeIndex <= 0 ? lastIndex : activeIndex - 1;
+    } else {
+      if (event.key === "ArrowDown") nextIndex = activeIndex === lastIndex ? 0 : activeIndex + 1;
+      if (event.key === "ArrowUp") nextIndex = activeIndex <= 0 ? lastIndex : activeIndex - 1;
+    }
+    if (event.key === "Home") nextIndex = 0;
+    if (event.key === "End") nextIndex = lastIndex;
 
-    setValue(nextItem.value);
-    tabRefs.current[nextIndex]?.focus();
+    if (nextIndex !== activeIndex) {
+      event.preventDefault();
+      const nextItem = items[nextIndex];
+      if (!nextItem.disabled) {
+        setValue(nextItem.value);
+        tabRefs.current[nextIndex]?.focus();
+      }
+    }
   };
 
   return (

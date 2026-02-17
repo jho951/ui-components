@@ -25,9 +25,10 @@ function isMac  (): boolean {
     const ua = (navigator.userAgent || "").toLowerCase();
 
     return /mac|iphone|ipad|ipod/.test(p) || /mac os x|iphone|ipad|ipod/.test(ua);
-}
+};
 
 export const MOD : MOD_TYPE = isMac() ? "Meta" : "Control";
+
 
 
 
