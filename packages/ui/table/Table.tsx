@@ -4,7 +4,7 @@ import { cn } from "@lib/index.ts";
 import type { TableProps } from "./Table.types.ts";
 import styles from "./Table.module.css";
 
-const Table = <T extends Record<string, ReactNode>>({ columns, data, caption, striped = false, compact = false }: TableProps<T>) => {
+const Table = <T extends Record<string, unknown>>({ columns, data, caption, striped = false, compact = false }: TableProps<T>) => {
   return (
     <div className={styles.wrapper}>
       <table className={cn(styles.table, striped && styles.striped, compact && styles.compact)}>
@@ -23,7 +23,7 @@ const Table = <T extends Record<string, ReactNode>>({ columns, data, caption, st
             <tr key={idx}>
               {columns.map((col) => (
                 <td key={col.key} style={{ textAlign: col.align }}>
-                  {row[col.key]}
+                  {row[col.key] as ReactNode}
                 </td>
               ))}
             </tr>

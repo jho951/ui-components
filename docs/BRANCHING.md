@@ -17,6 +17,7 @@
 ### `release/sync-main`
 - `main` 반영 전 “정리/검증” 브랜치
 - 원칙: **항상 `main`을 기반으로 최신 상태를 유지**
+- `pnpm run sync-main`으로 `dev`를 반영하되 Storybook 경로는 자동 제외
 
 ### `main`
 - 배포/소비자 브랜치
@@ -41,49 +42,40 @@ git push origin dev
 
 ---
 
-### B. release/sync-main을 main 최신으로 맞추기
+### B. release/sync-main 준비
 
 ```bash
 git checkout release/sync-main
 git pull origin release/sync-main
-
-git fetch origin main
-git merge origin/main
 ```
 
 ---
 
-### C. dev 변경을 release/sync-main에 반영하기 (권장: packages만 가져오기)
+### C. dev 변경을 release/sync-main에 반영하기 (자동화)
 
-> `dev`를 그대로 merge 하면 Storybook이 유입되므로, **필요한 경로만 선택적으로 반영**합니다.
+`sync-main`에서는 수동으로 Storybook 파일을 지우지 않고 아래 스크립트만 실행합니다.
 
-#### 1) sync-main으로 이동 + 원격 최신화
 ```bash
+pnpm run sync-main
+```
 
-git checkout release/sync-main
-git fetch --prune origin main dev
-```
-#### 2) sync-main은 항상 main 최신 유지
-``` bash
-git merge origin/main
-```
-#### 3) dev에서 packages만 반영 (storybook/산출물 제외)
-``` bash
-git restore --source origin/dev -- packages
-```
-#### 4 (선택) packages 안에 스토리 파일이 섞여 있다면 제거
+스크립트 동작:
+1. `origin/main`을 `release/sync-main`에 merge
+2. `origin/dev`를 `release/sync-main`에 merge
+3. `package.json`을 merge 전(`main` 동기화 직후) 상태로 복원
+4. `storybook`, `.storybook`, `apps/storybook`, `storybook-static` 제거
+
+실행 후:
+
 ```bash
-# 스토리 파일이 있다면 main 반영 금지 정책에 따라 제거
-
-git ls-files packages | grep -E '\.stories\.' | xargs -I{} git rm "{}"
-git ls-files packages | grep -E '\.mdx$' | xargs -I{} git rm "{}"
-```
-#### 5) 커밋 & 푸시
-``` bash
-git add -A
-git commit -m "sync: bring packages from dev (no storybook)"
+git status
+git commit -m "sync: merge dev without storybook"
 git push origin release/sync-main
 ```
+
+주의:
+- 스크립트는 `release/sync-main` 브랜치에서만 실행됩니다.
+- 워킹트리에 추적 중 변경사항이 있으면 안전하게 중단됩니다.
 
 ---
 
