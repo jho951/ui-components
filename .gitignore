@@ -20,4 +20,6 @@ coverage/
 .DS_Store
 
 # IDE
-.idea
+.idea/
+*.iws
+out/
