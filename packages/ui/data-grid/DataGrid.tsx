@@ -26,6 +26,16 @@ const DataGrid = <T extends Record<string, unknown>>({ columns, rows, searchable
     });
   }, [query, rows, sortKey, sortDir]);
 
+  const getAriaSort = (isSorted: boolean) => {
+    if (!isSorted) return "none";
+    return sortDir === "asc" ? "ascending" : "descending";
+  };
+
+  const getSortMark = (isSorted: boolean) => {
+    if (!isSorted) return "";
+    return sortDir === "asc" ? "▲" : "▼";
+  };
+
   return (
     <section className={styles.wrapper}>
       {searchable && (
@@ -45,16 +55,7 @@ const DataGrid = <T extends Record<string, unknown>>({ columns, rows, searchable
         <thead>
           <tr>
             {columns.map((column) => (
-              <th
-                key={column.key}
-                aria-sort={
-                  sortKey === column.key
-                    ? sortDir === "asc"
-                      ? "ascending"
-                      : "descending"
-                    : "none"
-                }
-              >
+              <th key={column.key} aria-sort={getAriaSort(sortKey === column.key)}>
                 {column.sortable ? (
                   <button
                     type="button"
@@ -68,7 +69,7 @@ const DataGrid = <T extends Record<string, unknown>>({ columns, rows, searchable
                       }
                     }}
                   >
-                    {column.header} {sortKey === column.key ? (sortDir === "asc" ? "▲" : "▼") : ""}
+                    {column.header} {getSortMark(sortKey === column.key)}
                   </button>
                 ) : (
                   column.header

@@ -8,10 +8,12 @@ export function generateId (): string {
     if (typeof window !== "undefined" && window.crypto?.randomUUID) {return window.crypto.randomUUID();}
 
     if (typeof window !== "undefined" && window.crypto?.getRandomValues) {
-        return (([1e7] as any) + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c: number) =>
-            (c ^ window.crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4))).toString(16)
-        );
+        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (char) => {
+            const rand = window.crypto.getRandomValues(new Uint8Array(1))[0] & 15;
+            const value = char === "x" ? rand : (rand & 3) | 8;
+            return value.toString(16);
+        });
     }
     
     return `${timestamp}-${randomPart}`;
-};
+}

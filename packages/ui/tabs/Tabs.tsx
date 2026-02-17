@@ -24,28 +24,31 @@ const Tabs = ({ items, value, defaultValue, onChange, orientation = "horizontal"
     onChange?.(nextValue);
   };
 
+  const getNextIndex = (key: string, currentIndex: number, lastIndex: number) => {
+    if (key === "Home") return 0;
+    if (key === "End") return lastIndex;
+
+    const isNextKey = orientation === "horizontal" ? key === "ArrowRight" : key === "ArrowDown";
+    const isPrevKey = orientation === "horizontal" ? key === "ArrowLeft" : key === "ArrowUp";
+
+    if (isNextKey) return currentIndex === lastIndex ? 0 : currentIndex + 1;
+    if (isPrevKey) return currentIndex <= 0 ? lastIndex : currentIndex - 1;
+    return currentIndex;
+  };
+
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (!items.length) return;
+
     const lastIndex = items.length - 1;
-    let nextIndex = activeIndex;
+    const nextIndex = getNextIndex(event.key, activeIndex, lastIndex);
 
-    if (orientation === "horizontal") {
-      if (event.key === "ArrowRight") nextIndex = activeIndex === lastIndex ? 0 : activeIndex + 1;
-      if (event.key === "ArrowLeft") nextIndex = activeIndex <= 0 ? lastIndex : activeIndex - 1;
-    } else {
-      if (event.key === "ArrowDown") nextIndex = activeIndex === lastIndex ? 0 : activeIndex + 1;
-      if (event.key === "ArrowUp") nextIndex = activeIndex <= 0 ? lastIndex : activeIndex - 1;
-    }
-    if (event.key === "Home") nextIndex = 0;
-    if (event.key === "End") nextIndex = lastIndex;
+    if (nextIndex === activeIndex) return;
 
-    if (nextIndex !== activeIndex) {
-      event.preventDefault();
-      const nextItem = items[nextIndex];
-      if (!nextItem.disabled) {
-        setValue(nextItem.value);
-        tabRefs.current[nextIndex]?.focus();
-      }
+    event.preventDefault();
+    const nextItem = items[nextIndex];
+    if (!nextItem?.disabled) {
+      setValue(nextItem.value);
+      tabRefs.current[nextIndex]?.focus();
     }
   };
 
